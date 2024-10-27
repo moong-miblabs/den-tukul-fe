@@ -138,26 +138,49 @@ function auth(to, from, next) {
     if($store.getToken) {
         next()
     } else {
-        next({ name: 'login' })
+        next({ name: 'logout' })
     }
 }
 
-function guest() {
+function guest(to, from, next) {
     const $store = useStore()
     if($store.getToken) {
-        if($store.getRole == 'ADMIN') next({ name: 'home' })
-        else next({ name: 'home' })
+        if($store.getRole == 'ADMIN') next({ name: 'dashboard' })
+        else if($store.getRole == 'RESPONDEN') next({ name: 'home' })
+        else next({ name: 'role' })
     } else {
         next()
     }
 }
 
-function authAsAdmin() {
-
+function authAsAdmin(to, from, next) {
+    const $store = useStore()
+    if($store.getToken) {
+        if($store.getRole == 'ADMIN') next()
+        else next({ name: 'logout' })
+    } else {
+        next({ name: 'logout' })
+    }
 }
 
-function authAsResponden() {
+function authAsResponden(to, from, next) {
+    const $store = useStore()
+    if($store.getToken) {
+        if($store.getRole == 'RESPONDEN') next()
+        else next({ name: 'logout' })
+    } else {
+        next({ name: 'logout' })
+    }
+}
 
+function authAsAdminAndResponden(to, from, next) {
+    const $store = useStore()
+    if($store.getToken) {
+        if($store.getRole == 'ADMIN,RESPONDEN') next()
+        else next({ name: 'logout' })
+    } else {
+        next({ name: 'logout' })
+    }
 }
 
 const router = createRouter({
@@ -166,8 +189,8 @@ const router = createRouter({
         {
             path: '/',
             name: 'home',
-            component: () => import('@/views/pages/Landing.vue'),
-            // beforeEnter: auth
+            component: () => import('@/views/pages/Home.vue'),
+            beforeEnter: authAsResponden
         },
         {
             path: '/',
@@ -176,15 +199,52 @@ const router = createRouter({
                 {
                     path: '/dashboard',
                     name: 'dashboard',
-                    component: () => import('@/views/uikit/ChartDoc.vue'),
-                    // beforeEnter: auth
+                    component: () => import('@/views/uikit/Dashboard.vue'),
+                    beforeEnter: authAsAdmin
                 }
             ]
         },
         {
             path: '/login',
             name: 'login',
-            component: () => import('@/views/pages/auth/Login.vue')
+            component: () => import('@/views/pages/auth/Login.vue'),
+            beforeEnter: guest
+        },
+        {
+            path: '/',
+            component: AppLayout,
+            children : [
+                {
+                    path: '/role',
+                    name: 'role',
+                    component: () => import('@/views/pages/Role.vue'),
+                    beforeEnter: authAsAdminAndResponden
+                }
+            ]
+        },
+        {
+            path: '/',
+            component: AppLayout,
+            children : [
+                {
+                    path: '/edukasi',
+                    name: 'edukasi',
+                    component: () => import('@/views/uikit/Edukasi.vue'),
+                    beforeEnter: authAsResponden
+                }
+            ]
+        },
+        {
+            path: '/',
+            component: AppLayout,
+            children : [
+                {
+                    path: '/deteksi',
+                    name: 'deteksi',
+                    component: () => import('@/views/uikit/Deteksi.vue'),
+                    beforeEnter: authAsResponden
+                }
+            ]
         },
         {
             path: '/logout',
@@ -194,7 +254,8 @@ const router = createRouter({
         {
             path: '/register',
             name: 'register',
-            component: () => import('@/views/pages/auth/Register.vue')
+            component: () => import('@/views/pages/auth/Register.vue'),
+            beforeEnter: guest
         },
         {
             path: '/:pathMatch(.*)*',

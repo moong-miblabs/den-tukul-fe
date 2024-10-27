@@ -2,7 +2,7 @@
 
 <template>
     <div class="layout-footer">
-        SAKAI by
-        <a href="https://primevue.org" target="_blank" rel="noopener noreferrer" class="text-primary font-bold hover:underline">PrimeVue</a>
+        SIMPRO DEN TUKUL by Tri Wiji
+        <a href="https://poltekkes-smg.ac.id/" target="_blank" rel="noopener noreferrer" class="text-primary font-bold hover:underline">POLKESMAR</a>
     </div>
 </template>
