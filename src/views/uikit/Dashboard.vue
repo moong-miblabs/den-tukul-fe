@@ -230,38 +230,38 @@ watch(
 <template>
     <Fluid class="grid grid-cols-12 gap-8">
         <div class="col-span-12 xl:col-span-6">
-            <div class="card">
-                <div class="font-semibold text-xl mb-4">Linear</div>
+            <div class="card" style="padding: .25em;">
+                <div class="font-semibold text-xl mb-4">Kasus TB di lingkungan Sekolah</div>
                 <Chart type="line" :data="lineData" :options="lineOptions"></Chart>
             </div>
         </div>
         <div class="col-span-12 xl:col-span-6">
-            <div class="card">
-                <div class="font-semibold text-xl mb-4">Bar</div>
+            <div class="card" style="padding: .25em;">
+                <div class="font-semibold text-xl mb-4">Sekolah Menerapkan Pencegahan TB</div>
                 <Chart type="bar" :data="barData" :options="barOptions"></Chart>
             </div>
         </div>
         <div class="col-span-12 xl:col-span-6">
-            <div class="card flex flex-col items-center">
-                <div class="font-semibold text-xl mb-4">Pie</div>
+            <div class="card flex flex-col items-center" style="padding: .25em;">
+                <div class="font-semibold text-xl mb-4">Persentase Temuan kasus TB setelah deteksi</div>
                 <Chart type="pie" :data="pieData" :options="pieOptions"></Chart>
             </div>
         </div>
         <div class="col-span-12 xl:col-span-6">
-            <div class="card flex flex-col items-center">
-                <div class="font-semibold text-xl mb-4">Doughnut</div>
+            <div class="card flex flex-col items-center" style="padding: .25em;">
+                <div class="font-semibold text-xl mb-4">Jumlah sembuh - rawat inap - meninggal karna TB</div>
                 <Chart type="doughnut" :data="pieData" :options="pieOptions"></Chart>
             </div>
         </div>
         <div class="col-span-12 xl:col-span-6">
-            <div class="card flex flex-col items-center">
-                <div class="font-semibold text-xl mb-4">Polar Area</div>
+            <div class="card flex flex-col items-center" style="padding: .25em;">
+                <div class="font-semibold text-xl mb-4">TB Berdasarkan faktor lingkungan</div>
                 <Chart type="polarArea" :data="polarData" :options="polarOptions"></Chart>
             </div>
         </div>
         <div class="col-span-12 xl:col-span-6">
-            <div class="card flex flex-col items-center">
-                <div class="font-semibold text-xl mb-4">Radar</div>
+            <div class="card flex flex-col items-center" style="padding: .25em;">
+                <div class="font-semibold text-xl mb-4">Persebaran Kasus TB di kecamatan X</div>
                 <Chart type="radar" :data="radarData" :options="radarOptions"></Chart>
             </div>
         </div>

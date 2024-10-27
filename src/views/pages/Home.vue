@@ -24,9 +24,13 @@ function smoothScroll(id) {
             >
                 <div class="mx-6 md:mx-20 mt-0 md:mt-6">
                     <h1 class="text-6xl font-bold text-gray-900 leading-tight"><span class="font-light block">SIMPRO</span>DEN TUKUL</h1>
-                    <p class="font-normal text-2xl leading-normal md:mt-4 text-gray-700">Sistem Informasi <sub>sebagai</sub> Media Promosi & Deteksi Dini Tuberkolosis <sub>di</sub> Sekolah</p>
+                    <p class="font-normal text-2xl leading-normal md:mt-4 text-gray-700">Sistem Informasi <sub>sebagai</sub></p>
+                    <p class="font-normal text-2xl leading-normal md:mt-4 text-gray-700">Media Promosi & Deteksi Dini</p>
+                    <p class="font-normal text-2xl leading-normal md:mt-4 text-gray-700">Tuberkolosis</p>
+                    <p class="font-normal text-2xl leading-normal md:mt-4 text-gray-700"><sub>di</sub> Sekolah</p>
                 </div>
                 <div class="flex justify-center md:justify-end" style="visibility: hidden;">
+                    <br>
                     <br>
                     <br>
                     <br>
