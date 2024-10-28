@@ -31,8 +31,8 @@ export const useStore = defineStore('store', {
         setRole     (payload) { this.role = payload },
         setNama     (payload) { this.nama = payload },
         setUsername (payload) { this.username = payload },
-        setWhatsapp (payload) { this.email = payload },
-        setWhatsappVerified (payload) { this.email_verified = payload },
+        setWhatsapp (payload) { this.whatsapp = payload },
+        setWhatsappVerified (payload) { this.whatsapp_verified = payload },
         setEmail (payload) { this.email = payload },
         setEmailVerified (payload) { this.email_verified = payload },
         

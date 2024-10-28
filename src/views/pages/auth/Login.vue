@@ -1,5 +1,6 @@
 <script setup>
 import FloatingConfigurator from '@/components/FloatingConfigurator.vue';
+import { LOADING_OPTIONS } from '@/env';
 import { ref } from 'vue';
 import { useVuelidate } from '@vuelidate/core'
 import { required, helpers } from '@vuelidate/validators'
@@ -9,11 +10,14 @@ import { useRouter } from 'vue-router'
 const $router   = useRouter()
 import { useStore } from '@/store'
 const $store = useStore()
+import $axios from '@/axios';
+import 'jquery'; import 'gasparesganga-jquery-loading-overlay';
 
 // ========== STATE ==========
 const email = ref(null)
 const password = ref(null)
-const visibleError = ref(false)
+const errorVisible = ref(false)
+const errorMessage = ref('Username atau Email atau Whatsapp atau Password yang anda masukan salah.')
 
 // ========== VUELIDATE RULES ==========
 const rules = {
@@ -27,20 +31,39 @@ const v$ = useVuelidate(rules,{email,password})
 async function onSubmit() {
     const isFormCorrect = await v$.value.$validate()
     if (!isFormCorrect) return
-    if(email.value === 'a' && password.value === 'a') {
-        $store.setRole('ADMIN')
-        $store.setToken('jwt')
-        $router.push({ name: 'dashboard' })
-    } else if(email.value === 'r' && password.value === 'r') {
-        $store.setRole('RESPONDEN')
-        $store.setToken('jwt')
-        $router.push({ name: 'home' })
-    } else if(email.value === 'b' && password.value === 'b') {
-        $store.setRole('ADMIN,RESPONDEN')
-        $store.setToken('jwt')
-        $router.push({ name: 'role' })
+    try {
+        $.LoadingOverlay("show", LOADING_OPTIONS);
+        var response = await $axios.post('login/login', {
+            username : email.value,
+            password: password.value
+        })
+        $.LoadingOverlay("hide");
+        console.log(response)
+        if(response.data.status === 'success') {
+            let data = response.data
+            $store.setId(data.data.id)
+            $store.setToken(data.token)
+            $store.setRole(data.data.role)
+            $store.setNama(data.data.nama_user)
+            $store.setUsername(data.data.username_user)
+            $store.setWhatsapp(data.data.whatsapp_user)
+            $store.setWhatsappVerified(data.data.whatsapp_verified_at)
+            $store.setEmail(data.data.email_user)
+            $store.setEmailVerified(data.data.email_verified_at)
+            if(data.data.role == 'RESPONDEN') {
+                $router.push({ name: 'home' })
+            } else if(data.data.role == 'ADMIN') {
+                $router.push({ name: 'dashboard' })
+            } else if(data.data.role == 'ADMIN,RESPONDEN') {
+                $router.push({ name: 'role' })
+            }
+        } else {
+            errorMessage.value = response.data.message
+            errorVisible.value = true
+        }
+    } catch (err) {
+        console.error(err)
     }
-    else visibleError.value = true
 }
 </script>
 
@@ -86,11 +109,11 @@ async function onSubmit() {
             </div>
         </div>
     </div>
-    <Dialog v-model:visible="visibleError" modal :style="{ width: '25rem' }">
+    <Dialog v-model:visible="errorVisible" modal :style="{ width: '25rem' }">
         <template #header>
             <span class="text-red-500 dark:text-red-300 text-xl">Gagal!</span>
         </template>
-        <span class="text-red-500 dark:text-red-300 block mb-8">Username atau Email atau Whatsapp atau Password yang anda masukan salah.</span>
+        <span class="text-red-500 dark:text-red-300 block mb-8">{{ errorMessage }}</span>
     </Dialog>
 </template>
 
