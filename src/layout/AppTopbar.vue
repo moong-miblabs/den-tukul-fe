@@ -12,7 +12,7 @@ const { onMenuToggle, toggleDarkMode, isDarkTheme } = useLayout();
                 <i class="pi pi-bars"></i>
             </button>
             <router-link to="/" class="layout-topbar-logo">
-                <img viewBox="0 0 54 40" fill="none" src="/images/GKL20_Politeknik-Kesehatan-Semarang - Koleksilogo.com.png" class="h-12 mr-2">
+                <img viewBox="0 0 54 40" fill="none" src="/images/Logo_of_Universitas_Negeri_Semarang.jpg" class="h-12 mr-2">
 
                 <span>DEN TUKUL</span>
             </router-link>

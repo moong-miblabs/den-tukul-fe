@@ -12,7 +12,11 @@ const $axios = axios.create({
 
 $axios.interceptors.request.use(function (config) {
     config.headers = { Authorization : $store.getToken }
-    config.params = { random: nanoid() }
+    if(config.params) {
+        config.params = Object.assign(config.params, { random: nanoid() })
+    } else {
+        config.params = { random: nanoid() }
+    }
     return config;
 });
 

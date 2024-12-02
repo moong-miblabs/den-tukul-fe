@@ -12,8 +12,8 @@ function smoothScroll(id) {
         <div id="home" class="landing-wrapper overflow-hidden">
             <div class="py-6 px-6 mx-0 md:mx-12 lg:mx-20 lg:px-20 flex items-center justify-between relative lg:static">
                 <a class="flex items-center" href="#">
-                    <img viewBox="0 0 54 40" fill="none" src="/images/GKL20_Politeknik-Kesehatan-Semarang - Koleksilogo.com.png" class="h-12 mr-2">
-                    <span class="text-surface-900 dark:text-surface-0 font-medium text-2xl leading-normal mr-20">POLKESMAR</span>
+                    <img viewBox="0 0 54 40" fill="none" src="/images/Logo_of_Universitas_Negeri_Semarang.jpg" class="h-12 mr-2">
+                    <span class="text-surface-900 dark:text-surface-0 font-medium text-2xl leading-normal mr-20">UNNES</span>
                 </a>
             </div>
 
@@ -23,7 +23,7 @@ function smoothScroll(id) {
                 style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), radial-gradient(77.36% 256.97% at 77.36% 57.52%, rgb(238, 239, 175) 0%, rgb(195, 227, 250) 100%); clip-path: ellipse(150% 87% at 93% 13%)"
             >
                 <div class="mx-6 md:mx-20 mt-0 md:mt-6">
-                    <h1 class="text-6xl font-bold text-gray-900 leading-tight"><span class="font-light block">SIMPRO</span>DEN TUKUL</h1>
+                    <h1 class="text-6xl font-bold text-gray-900 leading-tight">Instrumen deteksi dan pencegahan tbc pada anak</h1>
                     <p class="font-normal text-2xl leading-normal md:mt-4 text-gray-700">Sistem Informasi sebagai</p>
                     <p class="font-normal text-2xl leading-normal md:mt-4 text-gray-700">Media Promosi & Deteksi Dini</p>
                     <p class="font-normal text-2xl leading-normal md:mt-4 text-gray-700">Tuberkolosis</p>
@@ -143,7 +143,7 @@ function smoothScroll(id) {
                             <p class="text-gray-900 sm:line-height-2 md:line-height-4 text-2xl mt-6" style="max-width: 800px">
                                 sebagai persyarat kelulusan dari satuan pendidikan
                             </p>
-                            <img src="/images/logopoltek.png" class="mt-6" alt="Company logo" />
+                            <img src="/images/Logo_of_Universitas_Negeri_Semarang.jpg" width="50%" class="mt-6" alt="Company logo" />
                         </div>
                     </div>
                 </div>
