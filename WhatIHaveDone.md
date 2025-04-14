@@ -1,6 +1,7 @@
 1. git clone
 1. rename folder
 1. delete .git
+1. npm i
 1. npm install
 	1. @vuelidate/core & @vuelidate/validators
 	1. axios

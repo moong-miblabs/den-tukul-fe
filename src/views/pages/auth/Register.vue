@@ -8,7 +8,7 @@ const $router   = useRouter()
 import { useStore } from '@/store'
 const $store = useStore()
 import $axios from '@/axios';
-import 'jquery'; import 'gasparesganga-jquery-loading-overlay';
+// import $ from 'jquery'; import 'gasparesganga-jquery-loading-overlay';
 
 // ========== STATE ==========
 const enroll = ref(null)
@@ -273,7 +273,7 @@ onMounted(async () => {
             <div style="border-radius: 56px; padding: 0.3rem; background: linear-gradient(180deg, var(--primary-color) 10%, rgba(33, 150, 243, 0) 30%)">
                 <div class="w-full bg-surface-0 dark:bg-surface-900 py-20 px-8 sm:px-20" style="border-radius: 53px">
                     <div class="text-center mb-8">
-                        <img viewBox="0 0 54 40" fill="none" src="/images/Logo_of_Universitas_Negeri_Semarang.jpg" class="mb-8 w-16 shrink-0 mx-auto">
+                        <img viewBox="0 0 54 40" fill="none" src="/images/Logo_of_Universitas_Negeri_Semarang.jpg?wsxokn" class="mb-8 w-16 shrink-0 mx-auto">
                         <div class="text-surface-900 dark:text-surface-0 text-3xl font-medium mb-4">Mendaftarlah di DEN TUKUL!</div>
                         <span class="text-muted-color font-medium">Isi data Anda untuk mendaftar ke DEN TUKUL</span>
                     </div>

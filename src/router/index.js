@@ -205,6 +205,18 @@ const router = createRouter({
             ]
         },
         {
+            path: '/',
+            component: AppLayout,
+            children : [
+                {
+                    path: '/result',
+                    name: 'result',
+                    component: () => import('@/views/uikit/Result.vue'),
+                    beforeEnter: authAsAdmin
+                }
+            ]
+        },
+        {
             path: '/login',
             name: 'login',
             component: () => import('@/views/pages/auth/Login.vue'),
@@ -229,7 +241,7 @@ const router = createRouter({
                 {
                     path: '/edukasi',
                     name: 'edukasi',
-                    component: () => import('@/views/uikit/Edukasi.vue'),
+                    component: () => import('@/views/uikit/Edukasi2.vue'),
                     beforeEnter: authAsResponden
                 }
             ]

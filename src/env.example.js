@@ -1,5 +1,5 @@
-export const BASE_URL = ''
-export const SERVER_URL = ''
+export const BASE_URL = 'https://media-dan-deteksi-tuberkolosis.mibplus.id/'
+export const SERVER_URL = 'https://lumen-tukul.mibplus.id/'
 
 // Loading Overlay
 export const LOADING_OPTIONS = {

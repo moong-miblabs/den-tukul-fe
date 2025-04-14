@@ -1,248 +1,269 @@
 <script setup>
-import { CountryService } from '@/service/CountryService';
-import { NodeService } from '@/service/NodeService';
-import { onMounted, ref } from 'vue';
+import { ref } from 'vue';
+import { LOADING_OPTIONS } from '@/env';
+import $axios from '@/axios';
+import { useRouter } from 'vue-router'
+const $router = useRouter()
 
-const floatValue = ref(null);
-const autoValue = ref(null);
-const selectedAutoValue = ref(null);
-const autoFilteredValue = ref([]);
-const calendarValue = ref(null);
-const inputNumberValue = ref(null);
-const sliderValue = ref(50);
-const ratingValue = ref(null);
-const colorValue = ref('#1976D2');
-const radioValue = ref(null);
-const checkboxValue = ref([]);
-const switchValue = ref(false);
-const listboxValues = ref([
-    { name: 'New York', code: 'NY' },
-    { name: 'Rome', code: 'RM' },
-    { name: 'London', code: 'LDN' },
-    { name: 'Istanbul', code: 'IST' },
-    { name: 'Paris', code: 'PRS' }
-]);
-const listboxValue = ref(null);
+// ========== STATE ==========
 const dropdownValues = ref([
-    { name: 'New York', code: 'NY' },
-    { name: 'Rome', code: 'RM' },
-    { name: 'London', code: 'LDN' },
-    { name: 'Istanbul', code: 'IST' },
-    { name: 'Paris', code: 'PRS' }
-]);
-const dropdownValue = ref(null);
-const multiselectValues = ref([
-    { name: 'Australia', code: 'AU' },
-    { name: 'Brazil', code: 'BR' },
-    { name: 'China', code: 'CN' },
-    { name: 'Egypt', code: 'EG' },
-    { name: 'France', code: 'FR' },
-    { name: 'Germany', code: 'DE' },
-    { name: 'India', code: 'IN' },
-    { name: 'Japan', code: 'JP' },
-    { name: 'Spain', code: 'ES' },
-    { name: 'United States', code: 'US' }
+    { name: 'IYA', code: '1' },
+    { name: 'TIDAK', code: '0' }
 ]);
 
-const multiselectValue = ref(null);
-const toggleValue = ref(false);
-const selectButtonValue = ref(null);
-const selectButtonValues = ref([{ name: 'Option 1' }, { name: 'Option 2' }, { name: 'Option 3' }]);
-const knobValue = ref(50);
-const inputGroupValue = ref(false);
-const treeSelectNodes = ref(null);
-const selectedNode = ref(null);
+const q1 = ref(null)
+const q2 = ref(null)
+const q3 = ref(null)
+const q4 = ref(null)
+const q5 = ref(null)
+const q6 = ref(null)
+const q7 = ref(null)
+const q8 = ref(null)
+const q9 = ref(null)
+const q10 = ref(null)
+const q11 = ref(null)
+const q12 = ref(null)
 
-onMounted(() => {
-    CountryService.getCountries().then((data) => (autoValue.value = data));
-    NodeService.getTreeNodes().then((data) => (treeSelectNodes.value = data));
-});
+// ========== ERROR ==========
+const errorVisible = ref(false)
+const errorMessage = ref('')
 
-function searchCountry(event) {
-    setTimeout(() => {
-        if (!event.query.trim().length) {
-            autoFilteredValue.value = [...autoValue.value];
-        } else {
-            autoFilteredValue.value = autoValue.value.filter((country) => {
-                return country.name.toLowerCase().startsWith(event.query.toLowerCase());
-            });
-        }
-    }, 250);
+// ========== SUCCESS ==========
+const successVisible = ref(false)
+const successMessage = ref('')
+
+async function onSubmit() {
+    if(!(q1.value == '1' || q1.value == '0')) {
+        errorVisible.value = true
+        errorMessage.value = "Pertanyaan 1 belum dijawab"
+        return
+    }
+
+    if(!(q2.value == '1' || q2.value == '0')) {
+        errorVisible.value = true
+        errorMessage.value = "Pertanyaan 2 belum dijawab"
+        return
+    }
+
+    if(!(q3.value == '1' || q3.value == '0')) {
+        errorVisible.value = true
+        errorMessage.value = "Pertanyaan 3 belum dijawab"
+        return
+    }
+
+    if(!(q4.value == '1' || q4.value == '0')) {
+        errorVisible.value = true
+        errorMessage.value = "Pertanyaan 4 belum dijawab"
+        return
+    }
+
+    if(!(q5.value == '1' || q5.value == '0')) {
+        errorVisible.value = true
+        errorMessage.value = "Pertanyaan 5 belum dijawab"
+        return
+    }
+
+    if(!(q6.value == '1' || q6.value == '0')) {
+        errorVisible.value = true
+        errorMessage.value = "Pertanyaan 6 belum dijawab"
+        return
+    }
+
+    if(!(q7.value == '1' || q7.value == '0')) {
+        errorVisible.value = true
+        errorMessage.value = "Pertanyaan 7 belum dijawab"
+        return
+    }
+
+    if(!(q8.value == '1' || q8.value == '0')) {
+        errorVisible.value = true
+        errorMessage.value = "Pertanyaan 8 belum dijawab"
+        return
+    }
+
+    if(!(q9.value == '1' || q9.value == '0')) {
+        errorVisible.value = true
+        errorMessage.value = "Pertanyaan 9 belum dijawab"
+        return
+    }
+
+    if(!(q10.value == '1' || q10.value == '0')) {
+        errorVisible.value = true
+        errorMessage.value = "Pertanyaan 10 belum dijawab"
+        return
+    }
+
+    if(!(q11.value == '1' || q11.value == '0')) {
+        errorVisible.value = true
+        errorMessage.value = "Pertanyaan 11 belum dijawab"
+        return
+    }
+
+    if(!(q12.value == '1' || q12.value == '0')) {
+        errorVisible.value = true
+        errorMessage.value = "Pertanyaan 12 belum dijawab"
+        return
+    }
+
+    $.LoadingOverlay("show", LOADING_OPTIONS);
+    var response = await $axios.post('deteksi/register', {
+        q1: q1.value,
+        q2: q2.value,
+        q3: q3.value,
+        q4: q4.value,
+        q5: q5.value,
+        q6: q6.value,
+        q7: q7.value,
+        q8: q8.value,
+        q9: q9.value,
+        q10: q10.value,
+        q11: q11.value,
+        q12: q12.value,
+    })
+    $.LoadingOverlay("hide");
+    console.log(response)
+
+    if(response.data.status === "success") {
+        successVisible.value = true
+        successMessage.value = "Terima Kasih Telah Berpartisipasi"
+        setTimeout(() => {
+            successVisible.value = false
+            successMessage.value = ""
+            $router.push('/')
+        }, 5000);
+    }
 }
+
 </script>
 
 <template>
     <Fluid class="flex flex-col md:flex-row gap-8">
         <div class="md:w-1/2">
             <div class="card flex flex-col gap-4">
-                <div class="font-semibold text-xl">InputText</div>
-                <div class="flex flex-col md:flex-row gap-4">
-                    <InputText type="text" placeholder="Default" />
-                    <InputText type="text" placeholder="Disabled" :disabled="true" />
-                    <InputText type="text" placeholder="Invalid" invalid />
-                </div>
-
-                <div class="font-semibold text-xl">Icons</div>
-                <IconField>
-                    <InputIcon class="pi pi-user" />
-                    <InputText type="text" placeholder="Username" />
-                </IconField>
-                <IconField iconPosition="left">
-                    <InputText type="text" placeholder="Search" />
-                    <InputIcon class="pi pi-search" />
-                </IconField>
-
-                <div class="font-semibold text-xl">Float Label</div>
-                <FloatLabel>
-                    <InputText id="username" type="text" v-model="floatValue" />
-                    <label for="username">Username</label>
-                </FloatLabel>
-
-                <div class="font-semibold text-xl">Textarea</div>
-                <Textarea placeholder="Your Message" :autoResize="true" rows="3" cols="30" />
-
-                <div class="font-semibold text-xl">AutoComplete</div>
-                <AutoComplete v-model="selectedAutoValue" :suggestions="autoFilteredValue" optionLabel="name" placeholder="Search" dropdown multiple display="chip" @complete="searchCountry($event)" />
-
-                <div class="font-semibold text-xl">DatePicker</div>
-                <DatePicker :showIcon="true" :showButtonBar="true" v-model="calendarValue"></DatePicker>
-
-                <div class="font-semibold text-xl">InputNumber</div>
-                <InputNumber v-model="inputNumberValue" showButtons mode="decimal"></InputNumber>
-            </div>
-
-            <div class="card flex flex-col gap-4">
-                <div class="font-semibold text-xl">Slider</div>
-                <InputText v-model.number="sliderValue" />
-                <Slider v-model="sliderValue" />
-
-                <div class="flex flex-row mt-6">
-                    <div class="flex flex-col gap-4 w-1/2">
-                        <div class="font-semibold text-xl">Rating</div>
-                        <Rating v-model="ratingValue" />
-                    </div>
-                    <div class="flex flex-col gap-4 w-1/2">
-                        <div class="font-semibold text-xl">ColorPicker</div>
-                        <ColorPicker style="width: 2rem" v-model="colorValue" />
-                    </div>
-                </div>
-
-                <div class="font-semibold text-xl">Knob</div>
-                <Knob v-model="knobValue" :step="10" :min="-50" :max="50" valueTemplate="{value}%" />
+                <div class="font-semibold text-xl">1.	Batuk Berkepanjangan</div>
+                <img src="/images/1.png" width="100%">
+                <p style="text-align: justify; text-justify: inter-word;">Batuk yang berlangsung lebih dari 2-3 minggu adalah gejala utama TBC. Pada remaja, batuk ini awalnya kering, kemudian berkembang menjadi batuk berdahak. Dalam kasus yang lebih berat, batuk dapat disertai dengan darah.</p>
+                <Select v-model="q1" :options="dropdownValues" optionLabel="name" optionValue="code" placeholder="Apakah Anda mengalaminya?" />
             </div>
         </div>
+
         <div class="md:w-1/2">
             <div class="card flex flex-col gap-4">
-                <div class="font-semibold text-xl">RadioButton</div>
-                <div class="flex flex-col md:flex-row gap-4">
-                    <div class="flex items-center">
-                        <RadioButton id="option1" name="option" value="Chicago" v-model="radioValue" />
-                        <label for="option1" class="leading-none ml-2">Chicago</label>
-                    </div>
-                    <div class="flex items-center">
-                        <RadioButton id="option2" name="option" value="Los Angeles" v-model="radioValue" />
-                        <label for="option2" class="leading-none ml-2">Los Angeles</label>
-                    </div>
-                    <div class="flex items-center">
-                        <RadioButton id="option3" name="option" value="New York" v-model="radioValue" />
-                        <label for="option3" class="leading-none ml-2">New York</label>
-                    </div>
-                </div>
-
-                <div class="font-semibold text-xl">Checkbox</div>
-                <div class="flex flex-col md:flex-row gap-4">
-                    <div class="flex items-center">
-                        <Checkbox id="checkOption1" name="option" value="Chicago" v-model="checkboxValue" />
-                        <label for="checkOption1" class="ml-2">Chicago</label>
-                    </div>
-                    <div class="flex items-center">
-                        <Checkbox id="checkOption2" name="option" value="Los Angeles" v-model="checkboxValue" />
-                        <label for="checkOption2" class="ml-2">Los Angeles</label>
-                    </div>
-                    <div class="flex items-center">
-                        <Checkbox id="checkOption3" name="option" value="New York" v-model="checkboxValue" />
-                        <label for="checkOption3" class="ml-2">New York</label>
-                    </div>
-                </div>
-
-                <div class="font-semibold text-xl">ToggleSwitch</div>
-                <ToggleSwitch v-model="switchValue" />
-            </div>
-
-            <div class="card flex flex-col gap-4">
-                <div class="font-semibold text-xl">Listbox</div>
-                <Listbox v-model="listboxValue" :options="listboxValues" optionLabel="name" :filter="true" />
-
-                <div class="font-semibold text-xl">Select</div>
-                <Select v-model="dropdownValue" :options="dropdownValues" optionLabel="name" placeholder="Select" />
-
-                <div class="font-semibold text-xl">MultiSelect</div>
-                <MultiSelect v-model="multiselectValue" :options="multiselectValues" optionLabel="name" placeholder="Select Countries" :filter="true">
-                    <template #value="slotProps">
-                        <div class="inline-flex items-center py-1 px-2 bg-primary text-primary-contrast rounded-border mr-2" v-for="option of slotProps.value" :key="option.code">
-                            <span :class="'mr-2 flag flag-' + option.code.toLowerCase()" style="width: 18px; height: 12px" />
-                            <div>{{ option.name }}</div>
-                        </div>
-                        <template v-if="!slotProps.value || slotProps.value.length === 0">
-                            <div class="p-1">Select Countries</div>
-                        </template>
-                    </template>
-                    <template #option="slotProps">
-                        <div class="flex items-center">
-                            <span :class="'mr-2 flag flag-' + slotProps.option.code.toLowerCase()" style="width: 18px; height: 12px" />
-                            <div>{{ slotProps.option.name }}</div>
-                        </div>
-                    </template>
-                </MultiSelect>
-
-                <div class="font-semibold text-xl">TreeSelect</div>
-                <TreeSelect v-model="selectedNode" :options="treeSelectNodes" placeholder="Select Item"></TreeSelect>
-            </div>
-
-            <div class="card flex flex-col gap-4">
-                <div class="font-semibold text-xl">ToggleButton</div>
-                <ToggleButton v-model="toggleValue" onLabel="Yes" offLabel="No" :style="{ width: '10em' }" />
-
-                <div class="font-semibold text-xl">SelectButton</div>
-                <SelectButton v-model="selectButtonValue" :options="selectButtonValues" optionLabel="name" />
+                <div class="font-semibold text-xl">2.	Penurunan Berat Badan</div>
+                <img src="/images/2.jpeg" width="100%">
+                <p style="text-align: justify; text-justify: inter-word;">Remaja dengan TBC sering mengalami penurunan berat badan. Ini bisa terjadi meskipun nafsu makan masih normal.</p>
+                <Select v-model="q2" :options="dropdownValues" optionLabel="name" optionValue="code" placeholder="Apakah Anda mengalaminya?" />
             </div>
         </div>
-    </Fluid>
 
-    <Fluid class="flex mt-8">
-        <div class="card flex flex-col gap-4 w-full">
-            <div class="font-semibold text-xl">InputGroup</div>
-            <div class="flex flex-col md:flex-row gap-4">
-                <InputGroup>
-                    <InputGroupAddon>
-                        <i class="pi pi-user"></i>
-                    </InputGroupAddon>
-                    <InputText placeholder="Username" />
-                </InputGroup>
-                <InputGroup>
-                    <InputGroupAddon>
-                        <i class="pi pi-clock"></i>
-                    </InputGroupAddon>
-                    <InputGroupAddon>
-                        <i class="pi pi-star-fill"></i>
-                    </InputGroupAddon>
-                    <InputNumber placeholder="Price" />
-                    <InputGroupAddon>$</InputGroupAddon>
-                    <InputGroupAddon>.00</InputGroupAddon>
-                </InputGroup>
-            </div>
-            <div class="flex flex-col md:flex-row gap-4">
-                <InputGroup>
-                    <Button label="Search" />
-                    <InputText placeholder="Keyword" />
-                </InputGroup>
-                <InputGroup>
-                    <InputGroupAddon>
-                        <Checkbox v-model="inputGroupValue" :binary="true" />
-                    </InputGroupAddon>
-                    <InputText placeholder="Confirm" />
-                </InputGroup>
+        <div class="md:w-1/2">
+            <div class="card flex flex-col gap-4">
+                <div class="font-semibold text-xl">3.	Demam Ringan</div>
+                <img src="/images/3.jpeg" width="100%">
+                <p style="text-align: justify; text-justify: inter-word;">Demam rendah yang berlangsung lama, terutama di sore atau malam hari, bisa menjadi tanda TBC. Suhu tubuh biasanya tidak terlalu tinggi, sekitar 37.5-38.5°C.</p>
+                <Select v-model="q3" :options="dropdownValues" optionLabel="name" optionValue="code" placeholder="Apakah Anda mengalaminya?" />
             </div>
         </div>
+
+        <div class="md:w-1/2">
+            <div class="card flex flex-col gap-4">
+                <div class="font-semibold text-xl">4.	Keringat Malam</div>
+                <img src="/images/4.jpeg" width="100%">
+                <p style="text-align: justify; text-justify: inter-word;">Berkeringat berlebihan di malam hari, bahkan dalam kondisi cuaca yang tidak panas, adalah gejala khas TBC.</p>
+                <Select v-model="q4" :options="dropdownValues" optionLabel="name" optionValue="code" placeholder="Apakah Anda mengalaminya?" />
+            </div>
+        </div>
+
+        <div class="md:w-1/2">
+            <div class="card flex flex-col gap-4">
+                <div class="font-semibold text-xl">5.	Kelelahan dan Kelemahan</div>
+                <img src="/images/5.jpeg" width="100%">
+                <p style="text-align: justify; text-justify: inter-word;">Remaja dengan TBC sering merasa lelah dan lemah secara tidak wajar, bahkan setelah istirahat yang cukup.</p>
+                <Select v-model="q5" :options="dropdownValues" optionLabel="name" optionValue="code" placeholder="Apakah Anda mengalaminya?" />
+            </div>
+        </div>
+
+        <div class="md:w-1/2">
+            <div class="card flex flex-col gap-4">
+                <div class="font-semibold text-xl">6.	Nyeri Dada</div>
+                <img src="/images/6.jpeg" width="100%">
+                <p style="text-align: justify; text-justify: inter-word;">Rasa sakit atau tidak nyaman di dada, terutama saat bernapas dalam atau batuk, bisa mengindikasikan TBC paru.</p>
+                <Select v-model="q6" :options="dropdownValues" optionLabel="name" optionValue="code" placeholder="Apakah Anda mengalaminya?" />
+            </div>
+        </div>
+
+        <div class="md:w-1/2">
+            <div class="card flex flex-col gap-4">
+                <div class="font-semibold text-xl">7.	Sesak Napas</div>
+                <img src="/images/7.jpeg" width="100%">
+                <p style="text-align: justify; text-justify: inter-word;">Kesulitan bernapas atau napas pendek, terutama saat melakukan aktivitas fisik, bisa menjadi tanda TBC yang sudah lanjut.</p>
+                <Select v-model="q7" :options="dropdownValues" optionLabel="name" optionValue="code" placeholder="Apakah Anda mengalaminya?" />
+            </div>
+        </div>
+
+        <div class="md:w-1/2">
+            <div class="card flex flex-col gap-4">
+                <div class="font-semibold text-xl">8.	Kehilangan Nafsu Makan</div>
+                <img src="/images/8.jpeg" width="100%">
+                <p style="text-align: justify; text-justify: inter-word;">Remaja dengan TBC ,mengalami penurunan nafsu makan yang signifikan.</p>
+                <Select v-model="q8" :options="dropdownValues" optionLabel="name" optionValue="code" placeholder="Apakah Anda mengalaminya?" />
+            </div>
+        </div>
+
+        <div class="md:w-1/2">
+            <div class="card flex flex-col gap-4">
+                <div class="font-semibold text-xl">9.	Pembengkakan Kelenjar Getah Bening</div>
+                <img src="/images/9.jpeg" width="100%">
+                <p style="text-align: justify; text-justify: inter-word;">Terutama di leher atau di ketiak, bisa menjadi tanda TBC yang menyebar ke sistem limfatik.</p>
+                <Select v-model="q9" :options="dropdownValues" optionLabel="name" optionValue="code" placeholder="Apakah Anda mengalaminya?" />
+            </div>
+        </div>
+
+        <div class="md:w-1/2">
+            <div class="card flex flex-col gap-4">
+                <div class="font-semibold text-xl">10.	Kulit Pucat</div>
+                <img src="/images/10.jpeg" width="100%">
+                <p style="text-align: justify; text-justify: inter-word;">Kulit yang tampak lebih pucat dari biasanya bisa mengindikasikan anemia, yang sering terjadi pada penderita TBC.</p>
+                <Select v-model="q10" :options="dropdownValues" optionLabel="name" optionValue="code" placeholder="Apakah Anda mengalaminya?" />
+            </div>
+        </div>
+
+        <div class="md:w-1/2">
+            <div class="card flex flex-col gap-4">
+                <div class="font-semibold text-xl">11.	Perubahan Perilaku</div>
+                <img src="/images/12.jpeg" width="100%">
+                <p style="text-align: justify; text-justify: inter-word;">Remaja dengan TBC mungkin menjadi lebih mudah tersinggung, lesu, atau mengalami perubahan mood yang tidak biasa.</p>
+                <Select v-model="q11" :options="dropdownValues" optionLabel="name" optionValue="code" placeholder="Apakah Anda mengalaminya?" />
+            </div>
+        </div>
+
+        <div class="md:w-1/2">
+            <div class="card flex flex-col gap-4">
+                <div class="font-semibold text-xl">12.	Gangguan Pertumbuhan</div>
+                <img src="/images/11.jpeg" width="100%">
+                <p style="text-align: justify; text-justify: inter-word;">TBC dapat memperlambat pertumbuhan dan perkembangan pada remaja.</p>
+                <Select v-model="q12" :options="dropdownValues" optionLabel="name" optionValue="code" placeholder="Apakah Anda mengalaminya?" />
+            </div>
+        </div>
+        
+        <div class="md:w-1/2">
+            <div class="card flex flex-col gap-4">
+                <Button label="Submit" @click="onSubmit"></Button>
+            </div>
+        </div>
+
+        <Dialog v-model:visible="errorVisible" modal :style="{ width: '25rem' }">
+            <template #header>
+                <span class="text-red-500 dark:text-red-300 text-xl">Gagal!</span>
+            </template>
+            <span class="text-red-500 dark:text-red-300 block mb-8">{{ errorMessage }}</span>
+        </Dialog>
+
+        <Dialog v-model:visible="successVisible" modal :style="{ width: '25rem' }">
+            <template #header>
+                <span class="text-green-500 dark:text-green-300 text-xl">Berhasil!</span>
+            </template>
+            <span class="text-green-500 dark:text-green-300 block mb-8">{{ successMessage }}</span>
+        </Dialog>
     </Fluid>
 </template>
