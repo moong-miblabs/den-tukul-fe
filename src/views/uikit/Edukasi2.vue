@@ -36,9 +36,9 @@ onUnmounted(() => {
 <template>
     <div class="flex flex-col">
         <div class="flex flex-col md:flex-row gap-4">
-            <div class="md:w-1/2">
+            <div class="w-full">
                 <img src="/images/edukasi/1.png">
-                <img src="/images/edukasi/2.png">
+                <img src="/images/edukasi/2-alt.png">
                 <img src="/images/edukasi/3.png">
                 <img src="/images/edukasi/4.png">
                 <img src="/images/edukasi/5.png">

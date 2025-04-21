@@ -30,7 +30,7 @@ const style_content = ref({
     <div class="flex flex-col">
 
         <div class="flex flex-col md:flex-row gap-4">
-            <div class="md:w-1/2">
+            <div class="w-full">
                 <div class="card" style="padding: .25em;">
                     <Accordion value="0">
                         <AccordionPanel value="0">

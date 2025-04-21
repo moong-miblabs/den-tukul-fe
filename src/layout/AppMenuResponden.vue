@@ -10,7 +10,7 @@ const model = ref([
             { label: 'Home', icon: 'pi pi-fw pi-home', to: '/' },
             { label: 'Edukasi', icon: 'pi pi-fw pi-book', to: '/edukasi' },
             { label: 'Deteksi', icon: 'pi pi-fw pi-search', to: '/deteksi' },
-            { label: 'Intervensi', icon: 'pi pi-fw pi-map', to: '/', disabled: 't' },
+            { label: 'Intervensi', icon: 'pi pi-fw pi-map', to: '/intervensi' },
             { label: 'Logout', icon: 'pi pi-fw pi-sign-out', to: '/logout' }
         ]
     }

@@ -217,6 +217,18 @@ const router = createRouter({
             ]
         },
         {
+            path: '/',
+            component: AppLayout,
+            children : [
+                {
+                    path: '/result2',
+                    name: 'result2',
+                    component: () => import('@/views/uikit/Result2.vue'),
+                    beforeEnter: authAsAdmin
+                }
+            ]
+        },
+        {
             path: '/login',
             name: 'login',
             component: () => import('@/views/pages/auth/Login.vue'),
@@ -254,6 +266,18 @@ const router = createRouter({
                     path: '/deteksi',
                     name: 'deteksi',
                     component: () => import('@/views/uikit/Deteksi.vue'),
+                    beforeEnter: authAsResponden
+                }
+            ]
+        },
+        {
+            path: '/',
+            component: AppLayout,
+            children : [
+                {
+                    path: '/intervensi',
+                    name: 'intervensi',
+                    component: () => import('@/views/uikit/Intervensi.vue'),
                     beforeEnter: authAsResponden
                 }
             ]
