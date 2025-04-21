@@ -30,6 +30,21 @@ const rules = {
 const v$ = useVuelidate(rules,{email,password})
 
 // ========== METHODS ==========
+function capitalizeFirst(word) {
+    let firstLetter = word.charAt(0)
+    let firstLetterCap = firstLetter.toUpperCase()
+    let remainingLetters = word.slice(1).toLowerCase()
+    let capitalizedWord = firstLetterCap + remainingLetters
+    return capitalizedWord
+}
+
+function capitalizedEachWord(words) {
+    let arr = words.split(' ')
+    let newArr = arr.map(word => capitalizeFirst(word))
+    let str = newArr.join(' ')
+    return str
+}
+
 async function onSubmit() {
     const isFormCorrect = await v$.value.$validate()
     if (!isFormCorrect) return
@@ -60,14 +75,13 @@ async function onSubmit() {
                 $router.push({ name: 'role' })
             }
         } else {
-            errorMessage.value = response.data.message
+            errorMessage.value = capitalizedEachWord(response.data.message)
             errorVisible.value = true
         }
     } catch (err) {
         console.error(err)
     }
 }
-
 </script>
 
 <template>
