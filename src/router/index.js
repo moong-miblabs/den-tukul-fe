@@ -265,7 +265,7 @@ const router = createRouter({
                 {
                     path: '/deteksi',
                     name: 'deteksi',
-                    component: () => import('@/views/uikit/Deteksi.vue'),
+                    component: () => import('@/views/uikit/DeteksiAlt.vue'),
                     beforeEnter: authAsResponden
                 }
             ]
@@ -277,7 +277,7 @@ const router = createRouter({
                 {
                     path: '/intervensi',
                     name: 'intervensi',
-                    component: () => import('@/views/uikit/Intervensi.vue'),
+                    component: () => import('@/views/uikit/IntervensiAlt.vue'),
                     beforeEnter: authAsResponden
                 }
             ]
