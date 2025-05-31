@@ -93,42 +93,46 @@
 
     <div className="card">
         <div class="font-semibold text-xl mb-4">EVALUASI MOTIVASI</div>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>No.</th>
-                    <th>Pernyataan</th>
-                    <th class="text-start">SS/S/TS/STS/Ya/Tidak</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr v-for="(em,index) in DATA.evaluasi_motivasi">
-                    <td>{{ em.n }}</td>
-                    <td>{{ PERTANYAAN_EM[index+1] }}</td>
-                    <td class="text-start">{{ answerToText(em.a) }}</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Pernyataan</th>
+                        <th class="text-start">SS/S/TS/STS/Ya/Tidak</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(em,index) in DATA.evaluasi_motivasi">
+                        <td>{{ em.n }}</td>
+                        <td>{{ PERTANYAAN_EM[index+1] }}</td>
+                        <td class="text-start">{{ answerToText(em.a) }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <div className="card">
         <div class="font-semibold text-xl mb-4">EVALUASI DUKUNGAN</div>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>No.</th>
-                    <th>Pernyataan</th>
-                    <th class="text-start">SS/S/TS/STS/Ya/Tidak</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr v-for="(ed,index) in DATA.evaluasi_dukungan">
-                    <td>{{ ed.n }}</td>
-                    <td>{{ PERTANYAAN_ED[index+1] }}</td>
-                    <td class="text-start">{{ answerToText(ed.a) }}</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Pernyataan</th>
+                        <th class="text-start">SS/S/TS/STS/Ya/Tidak</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(ed,index) in DATA.evaluasi_dukungan">
+                        <td>{{ ed.n }}</td>
+                        <td>{{ PERTANYAAN_ED[index+1] }}</td>
+                        <td class="text-start">{{ answerToText(ed.a) }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </template>
 
@@ -136,6 +140,7 @@
 import { ref, onMounted } from 'vue'
 import Swal from 'sweetalert2'
 import dateFormat from 'dateformat'
+import $ from 'jquery'; import 'gasparesganga-jquery-loading-overlay';
 
 import { LOADING_OPTIONS } from '@/env';
 import $axios from '@/axios';

@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 import { LOADING_OPTIONS } from '@/env';
+import $ from 'jquery'; import 'gasparesganga-jquery-loading-overlay';
 import $axios from '@/axios';
 import dateFormat from 'dateformat'
 import { useRoute,useRouter } from 'vue-router'

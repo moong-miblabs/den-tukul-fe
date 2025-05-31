@@ -77,100 +77,102 @@
 
     <div className="card">
         <div class="font-semibold text-xl mb-4">EVALUASI SIKAP</div>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>No.</th>
-                    <th>Pernyataan</th>
-                    <th>Selalu</th>
-                    <th>Sering</th>
-                    <th>Kadang</th>
-                    <th>Tidak Pernah</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>{{ PERTANYAAN_ES[1] }}</td>
-                    <td class="text-center"><input type="radio" v-model="es01" :value="'SS'"></td>
-                    <td class="text-center"><input type="radio" v-model="es01" :value="'SR'"></td>
-                    <td class="text-center"><input type="radio" v-model="es01" :value="'KD'"></td>
-                    <td class="text-center"><input type="radio" v-model="es01" :value="'TP'"></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>{{ PERTANYAAN_ES[2] }}</td>
-                    <td class="text-center"><input type="radio" v-model="es02" :value="'SS'"></td>
-                    <td class="text-center"><input type="radio" v-model="es02" :value="'SR'"></td>
-                    <td class="text-center"><input type="radio" v-model="es02" :value="'KD'"></td>
-                    <td class="text-center"><input type="radio" v-model="es02" :value="'TP'"></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>{{ PERTANYAAN_ES[3] }}</td>
-                    <td class="text-center"><input type="radio" v-model="es03" :value="'SS'"></td>
-                    <td class="text-center"><input type="radio" v-model="es03" :value="'SR'"></td>
-                    <td class="text-center"><input type="radio" v-model="es03" :value="'KD'"></td>
-                    <td class="text-center"><input type="radio" v-model="es03" :value="'TP'"></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>{{ PERTANYAAN_ES[4] }}</td>
-                    <td class="text-center"><input type="radio" v-model="es04" :value="'SS'"></td>
-                    <td class="text-center"><input type="radio" v-model="es04" :value="'SR'"></td>
-                    <td class="text-center"><input type="radio" v-model="es04" :value="'KD'"></td>
-                    <td class="text-center"><input type="radio" v-model="es04" :value="'TP'"></td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>{{ PERTANYAAN_ES[5] }}</td>
-                    <td class="text-center"><input type="radio" v-model="es05" :value="'SS'"></td>
-                    <td class="text-center"><input type="radio" v-model="es05" :value="'SR'"></td>
-                    <td class="text-center"><input type="radio" v-model="es05" :value="'KD'"></td>
-                    <td class="text-center"><input type="radio" v-model="es05" :value="'TP'"></td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>{{ PERTANYAAN_ES[6] }}</td>
-                    <td class="text-center"><input type="radio" v-model="es06" :value="'SS'"></td>
-                    <td class="text-center"><input type="radio" v-model="es06" :value="'SR'"></td>
-                    <td class="text-center"><input type="radio" v-model="es06" :value="'KD'"></td>
-                    <td class="text-center"><input type="radio" v-model="es06" :value="'TP'"></td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>{{ PERTANYAAN_ES[7] }}</td>
-                    <td class="text-center"><input type="radio" v-model="es07" :value="'SS'"></td>
-                    <td class="text-center"><input type="radio" v-model="es07" :value="'SR'"></td>
-                    <td class="text-center"><input type="radio" v-model="es07" :value="'KD'"></td>
-                    <td class="text-center"><input type="radio" v-model="es07" :value="'TP'"></td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>{{ PERTANYAAN_ES[8] }}</td>
-                    <td class="text-center"><input type="radio" v-model="es08" :value="'SS'"></td>
-                    <td class="text-center"><input type="radio" v-model="es08" :value="'SR'"></td>
-                    <td class="text-center"><input type="radio" v-model="es08" :value="'KD'"></td>
-                    <td class="text-center"><input type="radio" v-model="es08" :value="'TP'"></td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>{{ PERTANYAAN_ES[9] }}</td>
-                    <td class="text-center"><input type="radio" v-model="es09" :value="'SS'"></td>
-                    <td class="text-center"><input type="radio" v-model="es09" :value="'SR'"></td>
-                    <td class="text-center"><input type="radio" v-model="es09" :value="'KD'"></td>
-                    <td class="text-center"><input type="radio" v-model="es09" :value="'TP'"></td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>{{ PERTANYAAN_ES[10] }}</td>
-                    <td class="text-center"><input type="radio" v-model="es10" :value="'SS'"></td>
-                    <td class="text-center"><input type="radio" v-model="es10" :value="'SR'"></td>
-                    <td class="text-center"><input type="radio" v-model="es10" :value="'KD'"></td>
-                    <td class="text-center"><input type="radio" v-model="es10" :value="'TP'"></td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Pernyataan</th>
+                        <th>Selalu</th>
+                        <th>Sering</th>
+                        <th>Kadang</th>
+                        <th>Tidak Pernah</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>{{ PERTANYAAN_ES[1] }}</td>
+                        <td class="text-center"><input type="radio" v-model="es01" :value="'SS'"></td>
+                        <td class="text-center"><input type="radio" v-model="es01" :value="'SR'"></td>
+                        <td class="text-center"><input type="radio" v-model="es01" :value="'KD'"></td>
+                        <td class="text-center"><input type="radio" v-model="es01" :value="'TP'"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>{{ PERTANYAAN_ES[2] }}</td>
+                        <td class="text-center"><input type="radio" v-model="es02" :value="'SS'"></td>
+                        <td class="text-center"><input type="radio" v-model="es02" :value="'SR'"></td>
+                        <td class="text-center"><input type="radio" v-model="es02" :value="'KD'"></td>
+                        <td class="text-center"><input type="radio" v-model="es02" :value="'TP'"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>{{ PERTANYAAN_ES[3] }}</td>
+                        <td class="text-center"><input type="radio" v-model="es03" :value="'SS'"></td>
+                        <td class="text-center"><input type="radio" v-model="es03" :value="'SR'"></td>
+                        <td class="text-center"><input type="radio" v-model="es03" :value="'KD'"></td>
+                        <td class="text-center"><input type="radio" v-model="es03" :value="'TP'"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>{{ PERTANYAAN_ES[4] }}</td>
+                        <td class="text-center"><input type="radio" v-model="es04" :value="'SS'"></td>
+                        <td class="text-center"><input type="radio" v-model="es04" :value="'SR'"></td>
+                        <td class="text-center"><input type="radio" v-model="es04" :value="'KD'"></td>
+                        <td class="text-center"><input type="radio" v-model="es04" :value="'TP'"></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>{{ PERTANYAAN_ES[5] }}</td>
+                        <td class="text-center"><input type="radio" v-model="es05" :value="'SS'"></td>
+                        <td class="text-center"><input type="radio" v-model="es05" :value="'SR'"></td>
+                        <td class="text-center"><input type="radio" v-model="es05" :value="'KD'"></td>
+                        <td class="text-center"><input type="radio" v-model="es05" :value="'TP'"></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>{{ PERTANYAAN_ES[6] }}</td>
+                        <td class="text-center"><input type="radio" v-model="es06" :value="'SS'"></td>
+                        <td class="text-center"><input type="radio" v-model="es06" :value="'SR'"></td>
+                        <td class="text-center"><input type="radio" v-model="es06" :value="'KD'"></td>
+                        <td class="text-center"><input type="radio" v-model="es06" :value="'TP'"></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>{{ PERTANYAAN_ES[7] }}</td>
+                        <td class="text-center"><input type="radio" v-model="es07" :value="'SS'"></td>
+                        <td class="text-center"><input type="radio" v-model="es07" :value="'SR'"></td>
+                        <td class="text-center"><input type="radio" v-model="es07" :value="'KD'"></td>
+                        <td class="text-center"><input type="radio" v-model="es07" :value="'TP'"></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>{{ PERTANYAAN_ES[8] }}</td>
+                        <td class="text-center"><input type="radio" v-model="es08" :value="'SS'"></td>
+                        <td class="text-center"><input type="radio" v-model="es08" :value="'SR'"></td>
+                        <td class="text-center"><input type="radio" v-model="es08" :value="'KD'"></td>
+                        <td class="text-center"><input type="radio" v-model="es08" :value="'TP'"></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>{{ PERTANYAAN_ES[9] }}</td>
+                        <td class="text-center"><input type="radio" v-model="es09" :value="'SS'"></td>
+                        <td class="text-center"><input type="radio" v-model="es09" :value="'SR'"></td>
+                        <td class="text-center"><input type="radio" v-model="es09" :value="'KD'"></td>
+                        <td class="text-center"><input type="radio" v-model="es09" :value="'TP'"></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>{{ PERTANYAAN_ES[10] }}</td>
+                        <td class="text-center"><input type="radio" v-model="es10" :value="'SS'"></td>
+                        <td class="text-center"><input type="radio" v-model="es10" :value="'SR'"></td>
+                        <td class="text-center"><input type="radio" v-model="es10" :value="'KD'"></td>
+                        <td class="text-center"><input type="radio" v-model="es10" :value="'TP'"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <div className="card">
@@ -221,100 +223,102 @@
 
     <div className="card">
         <div class="font-semibold text-xl mb-4">EVALUASI MOTIVASI</div>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>No.</th>
-                    <th>Pernyataan</th>
-                    <th class="text-center">Sangat Setuju</th>
-                    <th class="text-center">Setuju</th>
-                    <th class="text-center">Tidak Setuju</th>
-                    <th class="text-center">Sangat Tidak Setuju</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>{{ PERTANYAAN_EM[1] }}</td>
-                    <td class="text-center"><input type="radio" v-model="em01" :value="'P1'"></td>
-                    <td class="text-center"><input type="radio" v-model="em01" :value="'P0'"></td>
-                    <td class="text-center"><input type="radio" v-model="em01" :value="'N0'"></td>
-                    <td class="text-center"><input type="radio" v-model="em01" :value="'N1'"></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>{{ PERTANYAAN_EM[2] }}</td>
-                    <td class="text-center"><input type="radio" v-model="em02" :value="'P1'"></td>
-                    <td class="text-center"><input type="radio" v-model="em02" :value="'P0'"></td>
-                    <td class="text-center"><input type="radio" v-model="em02" :value="'N0'"></td>
-                    <td class="text-center"><input type="radio" v-model="em02" :value="'N1'"></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>{{ PERTANYAAN_EM[3] }}</td>
-                    <td class="text-center"><input type="radio" v-model="em03" :value="'P1'"></td>
-                    <td class="text-center"><input type="radio" v-model="em03" :value="'P0'"></td>
-                    <td class="text-center"><input type="radio" v-model="em03" :value="'N0'"></td>
-                    <td class="text-center"><input type="radio" v-model="em03" :value="'N1'"></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>{{ PERTANYAAN_EM[4] }}</td>
-                    <td class="text-center"><input type="radio" v-model="em04" :value="'P1'"></td>
-                    <td class="text-center"><input type="radio" v-model="em04" :value="'P0'"></td>
-                    <td class="text-center"><input type="radio" v-model="em04" :value="'N0'"></td>
-                    <td class="text-center"><input type="radio" v-model="em04" :value="'N1'"></td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>{{ PERTANYAAN_EM[5] }}</td>
-                    <td class="text-center"><input type="radio" v-model="em05" :value="'P1'"></td>
-                    <td class="text-center"><input type="radio" v-model="em05" :value="'P0'"></td>
-                    <td class="text-center"><input type="radio" v-model="em05" :value="'N0'"></td>
-                    <td class="text-center"><input type="radio" v-model="em05" :value="'N1'"></td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>{{ PERTANYAAN_EM[6] }}</td>
-                    <td class="text-center"><input type="radio" v-model="em06" :value="'P1'"></td>
-                    <td class="text-center"><input type="radio" v-model="em06" :value="'P0'"></td>
-                    <td class="text-center"><input type="radio" v-model="em06" :value="'N0'"></td>
-                    <td class="text-center"><input type="radio" v-model="em06" :value="'N1'"></td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>{{ PERTANYAAN_EM[7] }}</td>
-                    <td class="text-center"><input type="radio" v-model="em07" :value="'P1'"></td>
-                    <td class="text-center"><input type="radio" v-model="em07" :value="'P0'"></td>
-                    <td class="text-center"><input type="radio" v-model="em07" :value="'N0'"></td>
-                    <td class="text-center"><input type="radio" v-model="em07" :value="'N1'"></td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>{{ PERTANYAAN_EM[8] }}</td>
-                    <td class="text-center"><input type="radio" v-model="em08" :value="'P1'"></td>
-                    <td class="text-center"><input type="radio" v-model="em08" :value="'P0'"></td>
-                    <td class="text-center"><input type="radio" v-model="em08" :value="'N0'"></td>
-                    <td class="text-center"><input type="radio" v-model="em08" :value="'N1'"></td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>{{ PERTANYAAN_EM[9] }}</td>
-                    <td class="text-center"><input type="radio" v-model="em09" :value="'P1'"></td>
-                    <td class="text-center"><input type="radio" v-model="em09" :value="'P0'"></td>
-                    <td class="text-center"><input type="radio" v-model="em09" :value="'N0'"></td>
-                    <td class="text-center"><input type="radio" v-model="em09" :value="'N1'"></td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>{{ PERTANYAAN_EM[10] }}</td>
-                    <td class="text-center"><input type="radio" v-model="em10" :value="'P1'"></td>
-                    <td class="text-center"><input type="radio" v-model="em10" :value="'P0'"></td>
-                    <td class="text-center"><input type="radio" v-model="em10" :value="'N0'"></td>
-                    <td class="text-center"><input type="radio" v-model="em10" :value="'N1'"></td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Pernyataan</th>
+                        <th class="text-center">Sangat Setuju</th>
+                        <th class="text-center">Setuju</th>
+                        <th class="text-center">Tidak Setuju</th>
+                        <th class="text-center">Sangat Tidak Setuju</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>{{ PERTANYAAN_EM[1] }}</td>
+                        <td class="text-center"><input type="radio" v-model="em01" :value="'P1'"></td>
+                        <td class="text-center"><input type="radio" v-model="em01" :value="'P0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em01" :value="'N0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em01" :value="'N1'"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>{{ PERTANYAAN_EM[2] }}</td>
+                        <td class="text-center"><input type="radio" v-model="em02" :value="'P1'"></td>
+                        <td class="text-center"><input type="radio" v-model="em02" :value="'P0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em02" :value="'N0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em02" :value="'N1'"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>{{ PERTANYAAN_EM[3] }}</td>
+                        <td class="text-center"><input type="radio" v-model="em03" :value="'P1'"></td>
+                        <td class="text-center"><input type="radio" v-model="em03" :value="'P0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em03" :value="'N0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em03" :value="'N1'"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>{{ PERTANYAAN_EM[4] }}</td>
+                        <td class="text-center"><input type="radio" v-model="em04" :value="'P1'"></td>
+                        <td class="text-center"><input type="radio" v-model="em04" :value="'P0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em04" :value="'N0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em04" :value="'N1'"></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>{{ PERTANYAAN_EM[5] }}</td>
+                        <td class="text-center"><input type="radio" v-model="em05" :value="'P1'"></td>
+                        <td class="text-center"><input type="radio" v-model="em05" :value="'P0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em05" :value="'N0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em05" :value="'N1'"></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>{{ PERTANYAAN_EM[6] }}</td>
+                        <td class="text-center"><input type="radio" v-model="em06" :value="'P1'"></td>
+                        <td class="text-center"><input type="radio" v-model="em06" :value="'P0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em06" :value="'N0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em06" :value="'N1'"></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>{{ PERTANYAAN_EM[7] }}</td>
+                        <td class="text-center"><input type="radio" v-model="em07" :value="'P1'"></td>
+                        <td class="text-center"><input type="radio" v-model="em07" :value="'P0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em07" :value="'N0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em07" :value="'N1'"></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>{{ PERTANYAAN_EM[8] }}</td>
+                        <td class="text-center"><input type="radio" v-model="em08" :value="'P1'"></td>
+                        <td class="text-center"><input type="radio" v-model="em08" :value="'P0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em08" :value="'N0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em08" :value="'N1'"></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>{{ PERTANYAAN_EM[9] }}</td>
+                        <td class="text-center"><input type="radio" v-model="em09" :value="'P1'"></td>
+                        <td class="text-center"><input type="radio" v-model="em09" :value="'P0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em09" :value="'N0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em09" :value="'N1'"></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>{{ PERTANYAAN_EM[10] }}</td>
+                        <td class="text-center"><input type="radio" v-model="em10" :value="'P1'"></td>
+                        <td class="text-center"><input type="radio" v-model="em10" :value="'P0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em10" :value="'N0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em10" :value="'N1'"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
         <table class="table table-striped">
             <thead>
@@ -350,116 +354,118 @@
 
     <div className="card">
         <div class="font-semibold text-xl mb-4">EVALUASI DUKUNGAN</div>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>No.</th>
-                    <th>Pernyataan</th>
-                    <th class="text-center">Sangat Setuju</th>
-                    <th class="text-center">Setuju</th>
-                    <th class="text-center">Tidak Setuju</th>
-                    <th class="text-center">Sangat Tidak Setuju</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>{{ PERTANYAAN_ED[1] }}</td>
-                    <td class="text-center"><input type="radio" v-model="ed01" :value="'P1'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed01" :value="'P0'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed01" :value="'N0'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed01" :value="'N1'"></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>{{ PERTANYAAN_ED[2] }}</td>
-                    <td class="text-center"><input type="radio" v-model="ed02" :value="'P1'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed02" :value="'P0'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed02" :value="'N0'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed02" :value="'N1'"></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>{{ PERTANYAAN_ED[3] }}</td>
-                    <td class="text-center"><input type="radio" v-model="ed03" :value="'P1'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed03" :value="'P0'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed03" :value="'N0'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed03" :value="'N1'"></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>{{ PERTANYAAN_ED[4] }}</td>
-                    <td class="text-center"><input type="radio" v-model="ed04" :value="'P1'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed04" :value="'P0'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed04" :value="'N0'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed04" :value="'N1'"></td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>{{ PERTANYAAN_ED[5] }}</td>
-                    <td class="text-center"><input type="radio" v-model="ed05" :value="'P1'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed05" :value="'P0'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed05" :value="'N0'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed05" :value="'N1'"></td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>{{ PERTANYAAN_ED[6] }}</td>
-                    <td class="text-center"><input type="radio" v-model="ed06" :value="'P1'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed06" :value="'P0'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed06" :value="'N0'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed06" :value="'N1'"></td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>{{ PERTANYAAN_ED[7] }}</td>
-                    <td class="text-center"><input type="radio" v-model="ed07" :value="'P1'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed07" :value="'P0'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed07" :value="'N0'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed07" :value="'N1'"></td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>{{ PERTANYAAN_ED[8] }}</td>
-                    <td class="text-center"><input type="radio" v-model="ed08" :value="'P1'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed08" :value="'P0'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed08" :value="'N0'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed08" :value="'N1'"></td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>{{ PERTANYAAN_ED[9] }}</td>
-                    <td class="text-center"><input type="radio" v-model="ed09" :value="'P1'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed09" :value="'P0'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed09" :value="'N0'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed09" :value="'N1'"></td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>{{ PERTANYAAN_ED[10] }}</td>
-                    <td class="text-center"><input type="radio" v-model="ed10" :value="'P1'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed10" :value="'P0'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed10" :value="'N0'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed10" :value="'N1'"></td>
-                </tr>
-                <tr>
-                    <td>11</td>
-                    <td>{{ PERTANYAAN_ED[11] }}</td>
-                    <td class="text-center"><input type="radio" v-model="ed11" :value="'P1'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed11" :value="'P0'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed11" :value="'N0'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed11" :value="'N1'"></td>
-                </tr>
-                <tr>
-                    <td>12</td>
-                    <td>{{ PERTANYAAN_ED[12] }}</td>
-                    <td class="text-center"><input type="radio" v-model="ed12" :value="'P1'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed12" :value="'P0'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed12" :value="'N0'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed12" :value="'N1'"></td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Pernyataan</th>
+                        <th class="text-center">Sangat Setuju</th>
+                        <th class="text-center">Setuju</th>
+                        <th class="text-center">Tidak Setuju</th>
+                        <th class="text-center">Sangat Tidak Setuju</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>{{ PERTANYAAN_ED[1] }}</td>
+                        <td class="text-center"><input type="radio" v-model="ed01" :value="'P1'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed01" :value="'P0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed01" :value="'N0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed01" :value="'N1'"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>{{ PERTANYAAN_ED[2] }}</td>
+                        <td class="text-center"><input type="radio" v-model="ed02" :value="'P1'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed02" :value="'P0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed02" :value="'N0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed02" :value="'N1'"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>{{ PERTANYAAN_ED[3] }}</td>
+                        <td class="text-center"><input type="radio" v-model="ed03" :value="'P1'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed03" :value="'P0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed03" :value="'N0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed03" :value="'N1'"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>{{ PERTANYAAN_ED[4] }}</td>
+                        <td class="text-center"><input type="radio" v-model="ed04" :value="'P1'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed04" :value="'P0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed04" :value="'N0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed04" :value="'N1'"></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>{{ PERTANYAAN_ED[5] }}</td>
+                        <td class="text-center"><input type="radio" v-model="ed05" :value="'P1'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed05" :value="'P0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed05" :value="'N0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed05" :value="'N1'"></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>{{ PERTANYAAN_ED[6] }}</td>
+                        <td class="text-center"><input type="radio" v-model="ed06" :value="'P1'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed06" :value="'P0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed06" :value="'N0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed06" :value="'N1'"></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>{{ PERTANYAAN_ED[7] }}</td>
+                        <td class="text-center"><input type="radio" v-model="ed07" :value="'P1'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed07" :value="'P0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed07" :value="'N0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed07" :value="'N1'"></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>{{ PERTANYAAN_ED[8] }}</td>
+                        <td class="text-center"><input type="radio" v-model="ed08" :value="'P1'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed08" :value="'P0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed08" :value="'N0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed08" :value="'N1'"></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>{{ PERTANYAAN_ED[9] }}</td>
+                        <td class="text-center"><input type="radio" v-model="ed09" :value="'P1'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed09" :value="'P0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed09" :value="'N0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed09" :value="'N1'"></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>{{ PERTANYAAN_ED[10] }}</td>
+                        <td class="text-center"><input type="radio" v-model="ed10" :value="'P1'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed10" :value="'P0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed10" :value="'N0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed10" :value="'N1'"></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>{{ PERTANYAAN_ED[11] }}</td>
+                        <td class="text-center"><input type="radio" v-model="ed11" :value="'P1'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed11" :value="'P0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed11" :value="'N0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed11" :value="'N1'"></td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>{{ PERTANYAAN_ED[12] }}</td>
+                        <td class="text-center"><input type="radio" v-model="ed12" :value="'P1'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed12" :value="'P0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed12" :value="'N0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed12" :value="'N1'"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
         <table class="table table-striped">
             <thead>
