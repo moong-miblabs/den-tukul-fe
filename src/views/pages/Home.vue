@@ -23,11 +23,10 @@ function smoothScroll(id) {
                 style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), radial-gradient(77.36% 256.97% at 77.36% 57.52%, rgb(238, 239, 175) 0%, rgb(195, 227, 250) 100%); clip-path: ellipse(150% 87% at 93% 13%)"
             >
                 <div class="mx-6 md:mx-20 mt-0 md:mt-6">
-                    <h1 class="text-6xl font-bold text-gray-900 leading-tight">Instrumen Deteksi dan Pencegahan TBC pada Anak</h1>
-                    <p class="font-normal text-2xl leading-normal md:mt-4 text-gray-700">Sistem Informasi sebagai</p>
-                    <p class="font-normal text-2xl leading-normal md:mt-4 text-gray-700">Media Promosi & Deteksi Dini</p>
-                    <p class="font-normal text-2xl leading-normal md:mt-4 text-gray-700">Tuberkolosis</p>
-                    <p class="font-normal text-2xl leading-normal md:mt-4 text-gray-700">di Sekolah</p>
+                    <h1 class="text-6xl font-bold text-gray-900 leading-tight">MOPETA (Model Pencegahan TBC Anak)</h1>
+                    <p class="font-normal text-2xl leading-normal md:mt-4 text-pink-500">Model pendampingan UKS berbasis web</p>
+                    <p class="font-normal text-2xl leading-normal md:mt-4 text-pink-500">dengan tutor sebaya untuk Deteksi Dini dan pencegahan TBC</p>
+                    <p class="font-normal text-2xl leading-normal md:mt-4 text-pink-500">pada anak usia 12-14 tahun</p>
                 </div>
                 <div class="flex justify-center md:justify-end" style="visibility: hidden;">
                     <br>
@@ -53,7 +52,7 @@ function smoothScroll(id) {
                                     <i class="pi pi-fw pi-book !text-2xl text-cyan-700"></i>
                                 </div>
                                 <h5 class="mb-2 text-surface-900 dark:text-surface-0 text-xl font-semibold">Edukasi</h5>
-                                <span class="text-surface-600 dark:text-surface-200">Edukasi seputar tuberkolosis.</span>
+                                <span class="text-surface-600 dark:text-surface-200">Edukasi tentang tuberkulosis.</span>
                             </div>
                         </div>
                     </div>
@@ -67,7 +66,7 @@ function smoothScroll(id) {
                                     <i class="pi pi-fw pi-search !text-2xl text-indigo-700"></i>
                                 </div>
                                 <div class="mt-6 mb-1 text-surface-900 dark:text-surface-0 text-xl font-semibold">Deteksi</div>
-                                <span class="text-surface-600 dark:text-surface-200">Deteksi dini tuberkolosis.</span>
+                                <span class="text-surface-600 dark:text-surface-200">Deteksi dini tuberkulosis.</span>
                             </div>
                         </div>
                     </div>
@@ -80,22 +79,22 @@ function smoothScroll(id) {
                                 <div class="flex items-center justify-center bg-slate-200 mb-4" style="width: 3.5rem; height: 3.5rem; border-radius: 10px">
                                     <i class="pi pi-fw pi-map !text-2xl text-slate-700"></i>
                                 </div>
-                                <div class="mt-6 mb-1 text-surface-900 dark:text-surface-0 text-xl font-semibold">Intervensi</div>
-                                <span class="text-surface-600 dark:text-surface-200">Intervensi seputar tuberkolosis.</span>
+                                <div class="mt-6 mb-1 text-surface-900 dark:text-surface-0 text-xl font-semibold">Pencegahan</div>
+                                <span class="text-surface-600 dark:text-surface-200">Pencegahan tuberkulosis.</span>
                             </div>
                         </div>
                     </div>
 
-                    <div v-if="false" class="col-span-12 md:col-span-12 lg:col-span-4 p-0 lg:pr-8 mt-6 lg:mt-0">
+                    <div @click="$router.push({ name: 'evaluasi' })" class="col-span-12 md:col-span-12 lg:col-span-4 p-0 lg:pr-8 mt-6 lg:mt-0">
                         <div
                             style="height: 160px; padding: 2px; border-radius: 10px; background: linear-gradient(90deg, rgba(145, 210, 204, 0.2), rgba(212, 162, 221, 0.2)), linear-gradient(180deg, rgba(251, 199, 145, 0.2), rgba(160, 210, 250, 0.2))"
                         >
                             <div class="p-4 bg-surface-0 dark:bg-surface-900 h-full" style="border-radius: 8px">
                                 <div class="flex items-center justify-center bg-blue-200 mb-4" style="width: 3.5rem; height: 3.5rem; border-radius: 10px">
-                                    <i class="pi pi-fw pi-globe !text-2xl text-blue-700"></i>
+                                    <i class="pi pi-fw pi-desktop !text-2xl text-blue-700"></i>
                                 </div>
-                                <div class="mt-6 mb-1 text-surface-900 dark:text-surface-0 text-xl font-semibold">Modern Practices</div>
-                                <span class="text-surface-600 dark:text-surface-200">Elementum nibh tellus molestie nunc non.</span>
+                                <div class="mt-6 mb-1 text-surface-900 dark:text-surface-0 text-xl font-semibold">Evaluasi</div>
+                                <span class="text-surface-600 dark:text-surface-200">Evaluasi Pengetahuan, Sikap, Praktik, Motivasi, Dukungan.</span>
                             </div>
                         </div>
                     </div>
@@ -136,12 +135,9 @@ function smoothScroll(id) {
                             <div class="text-gray-900 mb-2 text-3xl font-semibold">Tri Wiji Lestari</div>
                             <span class="text-gray-600 text-2xl">2024</span>
                             <p class="text-gray-900 sm:line-height-2 md:line-height-4 text-2xl mt-6" style="max-width: 800px">
-                                Sistem Informasi sebagai Media Promosi Kesehatan dan Deteksi Dini
-                                Tuberkolosis
+                                Media Promosi Kesehatan dan Deteksi Dini
+                                Tuberkulosis
                                 di lingkungan sekolah.
-                            </p>
-                            <p class="text-gray-900 sm:line-height-2 md:line-height-4 text-2xl mt-6" style="max-width: 800px">
-                                Sebagai persyarat kelulusan dari satuan pendidikan.
                             </p>
                             <img src="/images/Logo_of_Universitas_Negeri_Semarang.jpg?zsrfc" alt="UNNES Logo" width="50%" class="mt-6" />
                         </div>

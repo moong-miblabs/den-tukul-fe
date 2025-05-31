@@ -4,11 +4,11 @@ export const SERVER_URL = 'https://lumen-tukul.mibplus.id/'
 // Loading Overlay
 export const LOADING_OPTIONS = {
 	image       : "",
-	fontawesome : ""
+	fontawesome : "fa fa-circle-o-notch fa-spin fa-fw"
 }
 
 // Datatable Initial Setting
-export const FONT_SIZE			= {}
+export const FONT_SIZE			= {'font-size': '1.175rem'}
 export const PAGE 				= 1
 export const LIMIT 				= 25
 export const OPTIONS_PER_PAGE 	= [5,10,20,25,50,100]

@@ -229,6 +229,42 @@ const router = createRouter({
             ]
         },
         {
+            path: '/',
+            component: AppLayout,
+            children : [
+                {
+                    path: '/result3',
+                    name: 'result3',
+                    component: () => import('@/views/uikit/Result3.vue'),
+                    beforeEnter: authAsAdmin
+                }
+            ]
+        },
+        {
+            path: '/',
+            component: AppLayout,
+            children : [
+                {
+                    path: '/result3/:id',
+                    name: 'result31',
+                    component: () => import('@/views/uikit/Result31.vue'),
+                    beforeEnter: authAsAdmin
+                }
+            ]
+        },
+        {
+            path: '/',
+            component: AppLayout,
+            children : [
+                {
+                    path: '/result3/:id/:created_at',
+                    name: 'result32',
+                    component: () => import('@/views/pages/EmptyResult.vue'),
+                    beforeEnter: authAsAdmin
+                }
+            ]
+        },
+        {
             path: '/login',
             name: 'login',
             component: () => import('@/views/pages/auth/Login.vue'),
@@ -253,7 +289,145 @@ const router = createRouter({
                 {
                     path: '/edukasi',
                     name: 'edukasi',
-                    component: () => import('@/views/uikit/Edukasi2.vue'),
+                    component: () => import('@/views/uikit/MediaDoc.vue'),
+                    // component: () => import('@/views/uikit/Edukasi.vue'),
+                    // component: () => import('@/views/pages/Edukasi30.vue'),
+                    // component: () => import('@/views/pages/Edukasi.vue'),
+                    beforeEnter: authAsResponden
+                }
+            ]
+        },
+        {
+            path: '/',
+            component: AppLayout,
+            children : [
+                {
+                    path: '/edukasix',
+                    name: 'edukasix',
+                    // component: () => import('@/views/uikit/MediaDoc.vue'),
+                    component: () => import('@/views/uikit/Edukasi.vue'),
+                    // component: () => import('@/views/pages/Edukasi30.vue'),
+                    // component: () => import('@/views/pages/Edukasi.vue'),
+                    beforeEnter: authAsResponden
+                }
+            ]
+        },
+        {
+            path: '/',
+            component: AppLayout,
+            children : [
+                {
+                    path: '/edukasi/1',
+                    name: 'edukasi-1',
+                    component: () => import('@/views/pages/Edukasi31.vue'),
+                    beforeEnter: authAsResponden
+                }
+            ]
+        },
+        {
+            path: '/',
+            component: AppLayout,
+            children : [
+                {
+                    path: '/edukasi/2',
+                    name: 'edukasi-2',
+                    component: () => import('@/views/pages/Edukasi32.vue'),
+                    beforeEnter: authAsResponden
+                }
+            ]
+        },
+        {
+            path: '/',
+            component: AppLayout,
+            children : [
+                {
+                    path: '/edukasi/3',
+                    name: 'edukasi-3',
+                    component: () => import('@/views/pages/Edukasi33.vue'),
+                    beforeEnter: authAsResponden
+                }
+            ]
+        },
+        {
+            path: '/',
+            component: AppLayout,
+            children : [
+                {
+                    path: '/edukasi/4',
+                    name: 'edukasi-4',
+                    component: () => import('@/views/pages/Edukasi34.vue'),
+                    beforeEnter: authAsResponden
+                }
+            ]
+        },
+        {
+            path: '/',
+            component: AppLayout,
+            children : [
+                {
+                    path: '/edukasi/5',
+                    name: 'edukasi-5',
+                    component: () => import('@/views/pages/Edukasi35.vue'),
+                    beforeEnter: authAsResponden
+                }
+            ]
+        },
+        {
+            path: '/',
+            component: AppLayout,
+            children : [
+                {
+                    path: '/edukasi/6',
+                    name: 'edukasi-6',
+                    component: () => import('@/views/pages/Edukasi36.vue'),
+                    beforeEnter: authAsResponden
+                }
+            ]
+        },
+        {
+            path: '/',
+            component: AppLayout,
+            children : [
+                {
+                    path: '/edukasi/7',
+                    name: 'edukasi-7',
+                    component: () => import('@/views/pages/Edukasi37Alt.vue'),
+                    beforeEnter: authAsResponden
+                }
+            ]
+        },
+        {
+            path: '/',
+            component: AppLayout,
+            children : [
+                {
+                    path: '/edukasi/8',
+                    name: 'edukasi-8',
+                    component: () => import('@/views/pages/Edukasi38.vue'),
+                    beforeEnter: authAsResponden
+                }
+            ]
+        },
+        {
+            path: '/',
+            component: AppLayout,
+            children : [
+                {
+                    path: '/edukasi/9',
+                    name: 'edukasi-9',
+                    component: () => import('@/views/pages/Edukasi39.vue'),
+                    beforeEnter: authAsResponden
+                }
+            ]
+        },
+        {
+            path: '/',
+            component: AppLayout,
+            children : [
+                {
+                    path: '/landing',
+                    name: 'landing',
+                    component: () => import('@/views/pages/Landing.vue'),
                     beforeEnter: authAsResponden
                 }
             ]
@@ -278,6 +452,18 @@ const router = createRouter({
                     path: '/intervensi',
                     name: 'intervensi',
                     component: () => import('@/views/uikit/IntervensiAlt.vue'),
+                    beforeEnter: authAsResponden
+                }
+            ]
+        },
+        {
+            path: '/',
+            component: AppLayout,
+            children : [
+                {
+                    path: '/evaluasi',
+                    name: 'evaluasi',
+                    component: () => import('@/views/pages/Empty.vue'),
                     beforeEnter: authAsResponden
                 }
             ]
