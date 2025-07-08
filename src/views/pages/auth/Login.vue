@@ -23,7 +23,7 @@ const errorMessage = ref('')
 
 // ========== VUELIDATE RULES ==========
 const rules = {
-    email : { required : helpers.withMessage('Username / Email / Whatsapp harus diisi', required) },
+    email : { required : helpers.withMessage('Username harus diisi', required) },
     password : { required : helpers.withMessage('Password harus diisi', required) }
 }
 
@@ -94,12 +94,12 @@ async function onSubmit() {
                     <div class="text-center mb-8">
                         <img viewBox="0 0 54 40" fill="none" src="/images/Logo_of_Universitas_Negeri_Semarang.jpg?plmqaz" alt="logo UNNES" class="mb-8 w-16 shrink-0 mx-auto">
                         <div class="text-surface-900 dark:text-surface-0 text-3xl font-medium mb-4">Selamat Datang di</div>
-                        <div class="text-surface-900 dark:text-surface-0 text-3xl font-medium mb-4">Instrumen Deteksi dan Pencegahan TBC pada Anak</div>
+                        <div class="text-surface-900 dark:text-surface-0 text-3xl font-medium mb-4">MOPETA (Model Pencegahan TBC Anak)</div>
                         <span class="text-muted-color font-medium">Sign in untuk melanjutkan</span>
                     </div>
 
                     <div>
-                        <label for="email1" class="block text-surface-900 dark:text-surface-0 text-xl font-medium mb-2">Username / Email / Whatsapp</label>
+                        <label for="email1" class="block text-surface-900 dark:text-surface-0 text-xl font-medium mb-2">Username</label>
                         <InputText id="email1" type="text" placeholder="lorem/example@gmail.com/628xx" class="w-full" :class="{'mb-8': !v$.email.$error, 'mb-1': v$.email.$error}" v-model="email" :invalid="v$.email.$error" />
                         <Message severity="error" class="mb-7" v-if="v$.email.$error" v-for="error in v$.email.$errors">{{error.$message}}</Message>
 
