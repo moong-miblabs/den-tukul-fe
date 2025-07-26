@@ -39,6 +39,11 @@ onMounted(async () => {
             <Column field="nama_user" header="Nama"></Column>
             <Column field="klasifikasi" header="Klasifikasi"></Column>
             <Column field="created_at" header="Tgl. Input"></Column>
+            <Column header="Detail">
+                <template #body="slotProps">
+                    <Button @click="$router.push('/result2/'+slotProps.data.id)" label="Detail" icon="pi pi-info-circle"></Button>
+                </template>
+            </Column>
         </DataTable>
     </div>
 </template>

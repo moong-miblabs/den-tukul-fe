@@ -14,62 +14,62 @@
                 <tr>
                     <td>1</td>
                     <td>{{ PERTANYAAN_ET[1] }}</td>
-                    <td class="text-center"><input type="radio" v-model="et01" :value="'1'"></td>
-                    <td class="text-center"><input type="radio" v-model="et01" :value="'0'"></td>
+                    <td class="text-center"><input type="radio" v-model="et01" :value="'B'"></td>
+                    <td class="text-center"><input type="radio" v-model="et01" :value="'S'"></td>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td>{{ PERTANYAAN_ET[2] }}</td>
-                    <td class="text-center"><input type="radio" v-model="et02" :value="'1'"></td>
-                    <td class="text-center"><input type="radio" v-model="et02" :value="'0'"></td>
+                    <td class="text-center"><input type="radio" v-model="et02" :value="'B'"></td>
+                    <td class="text-center"><input type="radio" v-model="et02" :value="'S'"></td>
                 </tr>
                 <tr>
                     <td>3</td>
                     <td>{{ PERTANYAAN_ET[3] }}</td>
-                    <td class="text-center"><input type="radio" v-model="et03" :value="'1'"></td>
-                    <td class="text-center"><input type="radio" v-model="et03" :value="'0'"></td>
+                    <td class="text-center"><input type="radio" v-model="et03" :value="'B'"></td>
+                    <td class="text-center"><input type="radio" v-model="et03" :value="'S'"></td>
                 </tr>
                 <tr>
                     <td>4</td>
                     <td>{{ PERTANYAAN_ET[4] }}</td>
-                    <td class="text-center"><input type="radio" v-model="et04" :value="'1'"></td>
-                    <td class="text-center"><input type="radio" v-model="et04" :value="'0'"></td>
+                    <td class="text-center"><input type="radio" v-model="et04" :value="'B'"></td>
+                    <td class="text-center"><input type="radio" v-model="et04" :value="'S'"></td>
                 </tr>
                 <tr>
                     <td>5</td>
                     <td>{{ PERTANYAAN_ET[5] }}</td>
-                    <td class="text-center"><input type="radio" v-model="et05" :value="'1'"></td>
-                    <td class="text-center"><input type="radio" v-model="et05" :value="'0'"></td>
+                    <td class="text-center"><input type="radio" v-model="et05" :value="'B'"></td>
+                    <td class="text-center"><input type="radio" v-model="et05" :value="'S'"></td>
                 </tr>
                 <tr>
                     <td>6</td>
                     <td>{{ PERTANYAAN_ET[6] }}</td>
-                    <td class="text-center"><input type="radio" v-model="et06" :value="'1'"></td>
-                    <td class="text-center"><input type="radio" v-model="et06" :value="'0'"></td>
+                    <td class="text-center"><input type="radio" v-model="et06" :value="'B'"></td>
+                    <td class="text-center"><input type="radio" v-model="et06" :value="'S'"></td>
                 </tr>
                 <tr>
                     <td>7</td>
                     <td>{{ PERTANYAAN_ET[7] }}</td>
-                    <td class="text-center"><input type="radio" v-model="et07" :value="'1'"></td>
-                    <td class="text-center"><input type="radio" v-model="et07" :value="'0'"></td>
+                    <td class="text-center"><input type="radio" v-model="et07" :value="'B'"></td>
+                    <td class="text-center"><input type="radio" v-model="et07" :value="'S'"></td>
                 </tr>
                 <tr>
                     <td>8</td>
                     <td>{{ PERTANYAAN_ET[8] }}</td>
-                    <td class="text-center"><input type="radio" v-model="et08" :value="'1'"></td>
-                    <td class="text-center"><input type="radio" v-model="et08" :value="'0'"></td>
+                    <td class="text-center"><input type="radio" v-model="et08" :value="'B'"></td>
+                    <td class="text-center"><input type="radio" v-model="et08" :value="'S'"></td>
                 </tr>
                 <tr>
                     <td>9</td>
                     <td>{{ PERTANYAAN_ET[9] }}</td>
-                    <td class="text-center"><input type="radio" v-model="et09" :value="'1'"></td>
-                    <td class="text-center"><input type="radio" v-model="et09" :value="'0'"></td>
+                    <td class="text-center"><input type="radio" v-model="et09" :value="'B'"></td>
+                    <td class="text-center"><input type="radio" v-model="et09" :value="'S'"></td>
                 </tr>
                 <tr>
                     <td>10</td>
                     <td>{{ PERTANYAAN_ET[10] }}</td>
-                    <td class="text-center"><input type="radio" v-model="et10" :value="'1'"></td>
-                    <td class="text-center"><input type="radio" v-model="et10" :value="'0'"></td>
+                    <td class="text-center"><input type="radio" v-model="et10" :value="'B'"></td>
+                    <td class="text-center"><input type="radio" v-model="et10" :value="'S'"></td>
                 </tr>
             </tbody>
         </table>
@@ -182,40 +182,40 @@
                 <tr>
                     <th>No.</th>
                     <th>Pernyataan</th>
-                    <th>Benar</th>
-                    <th>Salah</th>
+                    <th>Dilakukan</th>
+                    <th>Tidak Dilakukan</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>1</td>
                     <td>{{ PERTANYAAN_EP[1] }}</td>
-                    <td class="text-center"><input type="radio" v-model="ep1" :value="'1'"></td>
-                    <td class="text-center"><input type="radio" v-model="ep1" :value="'0'"></td>
+                    <td class="text-center"><input type="radio" v-model="ep1" :value="'Y'"></td>
+                    <td class="text-center"><input type="radio" v-model="ep1" :value="'T'"></td>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td>{{ PERTANYAAN_EP[2] }}</td>
-                    <td class="text-center"><input type="radio" v-model="ep2" :value="'1'"></td>
-                    <td class="text-center"><input type="radio" v-model="ep2" :value="'0'"></td>
+                    <td class="text-center"><input type="radio" v-model="ep2" :value="'Y'"></td>
+                    <td class="text-center"><input type="radio" v-model="ep2" :value="'T'"></td>
                 </tr>
                 <tr>
                     <td>3</td>
                     <td>{{ PERTANYAAN_EP[3] }}</td>
-                    <td class="text-center"><input type="radio" v-model="ep3" :value="'1'"></td>
-                    <td class="text-center"><input type="radio" v-model="ep3" :value="'0'"></td>
+                    <td class="text-center"><input type="radio" v-model="ep3" :value="'Y'"></td>
+                    <td class="text-center"><input type="radio" v-model="ep3" :value="'T'"></td>
                 </tr>
                 <tr>
                     <td>4</td>
                     <td>{{ PERTANYAAN_EP[4] }}</td>
-                    <td class="text-center"><input type="radio" v-model="ep4" :value="'1'"></td>
-                    <td class="text-center"><input type="radio" v-model="ep4" :value="'0'"></td>
+                    <td class="text-center"><input type="radio" v-model="ep4" :value="'Y'"></td>
+                    <td class="text-center"><input type="radio" v-model="ep4" :value="'T'"></td>
                 </tr>
                 <tr>
                     <td>5</td>
                     <td>{{ PERTANYAAN_EP[5] }}</td>
-                    <td class="text-center"><input type="radio" v-model="ep5" :value="'1'"></td>
-                    <td class="text-center"><input type="radio" v-model="ep5" :value="'0'"></td>
+                    <td class="text-center"><input type="radio" v-model="ep5" :value="'Y'"></td>
+                    <td class="text-center"><input type="radio" v-model="ep5" :value="'T'"></td>
                 </tr>
             </tbody>
         </table>
@@ -239,87 +239,88 @@
                     <tr>
                         <td>1</td>
                         <td>{{ PERTANYAAN_EM[1] }}</td>
-                        <td class="text-center"><input type="radio" v-model="em01" :value="'P1'"></td>
-                        <td class="text-center"><input type="radio" v-model="em01" :value="'P0'"></td>
-                        <td class="text-center"><input type="radio" v-model="em01" :value="'N0'"></td>
-                        <td class="text-center"><input type="radio" v-model="em01" :value="'N1'"></td>
+                        <td class="text-center"><input type="radio" v-model="em01" :value="'SS'"></td>
+                        <td class="text-center"><input type="radio" v-model="em01" :value="'S0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em01" :value="'T0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em01" :value="'ST'"></td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>{{ PERTANYAAN_EM[2] }}</td>
-                        <td class="text-center"><input type="radio" v-model="em02" :value="'P1'"></td>
-                        <td class="text-center"><input type="radio" v-model="em02" :value="'P0'"></td>
-                        <td class="text-center"><input type="radio" v-model="em02" :value="'N0'"></td>
-                        <td class="text-center"><input type="radio" v-model="em02" :value="'N1'"></td>
+                        <td class="text-center"><input type="radio" v-model="em02" :value="'SS'"></td>
+                        <td class="text-center"><input type="radio" v-model="em02" :value="'S0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em02" :value="'T0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em02" :value="'ST'"></td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>{{ PERTANYAAN_EM[3] }}</td>
-                        <td class="text-center"><input type="radio" v-model="em03" :value="'P1'"></td>
-                        <td class="text-center"><input type="radio" v-model="em03" :value="'P0'"></td>
-                        <td class="text-center"><input type="radio" v-model="em03" :value="'N0'"></td>
-                        <td class="text-center"><input type="radio" v-model="em03" :value="'N1'"></td>
+                        <td class="text-center"><input type="radio" v-model="em03" :value="'SS'"></td>
+                        <td class="text-center"><input type="radio" v-model="em03" :value="'S0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em03" :value="'T0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em03" :value="'ST'"></td>
                     </tr>
                     <tr>
                         <td>4</td>
                         <td>{{ PERTANYAAN_EM[4] }}</td>
-                        <td class="text-center"><input type="radio" v-model="em04" :value="'P1'"></td>
-                        <td class="text-center"><input type="radio" v-model="em04" :value="'P0'"></td>
-                        <td class="text-center"><input type="radio" v-model="em04" :value="'N0'"></td>
-                        <td class="text-center"><input type="radio" v-model="em04" :value="'N1'"></td>
+                        <td class="text-center"><input type="radio" v-model="em04" :value="'SS'"></td>
+                        <td class="text-center"><input type="radio" v-model="em04" :value="'S0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em04" :value="'T0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em04" :value="'ST'"></td>
                     </tr>
                     <tr>
                         <td>5</td>
                         <td>{{ PERTANYAAN_EM[5] }}</td>
-                        <td class="text-center"><input type="radio" v-model="em05" :value="'P1'"></td>
-                        <td class="text-center"><input type="radio" v-model="em05" :value="'P0'"></td>
-                        <td class="text-center"><input type="radio" v-model="em05" :value="'N0'"></td>
-                        <td class="text-center"><input type="radio" v-model="em05" :value="'N1'"></td>
+                        <td class="text-center"><input type="radio" v-model="em05" :value="'SS'"></td>
+                        <td class="text-center"><input type="radio" v-model="em05" :value="'S0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em05" :value="'T0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em05" :value="'ST'"></td>
                     </tr>
                     <tr>
                         <td>6</td>
                         <td>{{ PERTANYAAN_EM[6] }}</td>
-                        <td class="text-center"><input type="radio" v-model="em06" :value="'P1'"></td>
-                        <td class="text-center"><input type="radio" v-model="em06" :value="'P0'"></td>
-                        <td class="text-center"><input type="radio" v-model="em06" :value="'N0'"></td>
-                        <td class="text-center"><input type="radio" v-model="em06" :value="'N1'"></td>
+                        <td class="text-center"><input type="radio" v-model="em06" :value="'SS'"></td>
+                        <td class="text-center"><input type="radio" v-model="em06" :value="'S0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em06" :value="'T0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em06" :value="'ST'"></td>
                     </tr>
                     <tr>
                         <td>7</td>
                         <td>{{ PERTANYAAN_EM[7] }}</td>
-                        <td class="text-center"><input type="radio" v-model="em07" :value="'P1'"></td>
-                        <td class="text-center"><input type="radio" v-model="em07" :value="'P0'"></td>
-                        <td class="text-center"><input type="radio" v-model="em07" :value="'N0'"></td>
-                        <td class="text-center"><input type="radio" v-model="em07" :value="'N1'"></td>
+                        <td class="text-center"><input type="radio" v-model="em07" :value="'SS'"></td>
+                        <td class="text-center"><input type="radio" v-model="em07" :value="'S0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em07" :value="'T0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em07" :value="'ST'"></td>
                     </tr>
                     <tr>
                         <td>8</td>
                         <td>{{ PERTANYAAN_EM[8] }}</td>
-                        <td class="text-center"><input type="radio" v-model="em08" :value="'P1'"></td>
-                        <td class="text-center"><input type="radio" v-model="em08" :value="'P0'"></td>
-                        <td class="text-center"><input type="radio" v-model="em08" :value="'N0'"></td>
-                        <td class="text-center"><input type="radio" v-model="em08" :value="'N1'"></td>
+                        <td class="text-center"><input type="radio" v-model="em08" :value="'SS'"></td>
+                        <td class="text-center"><input type="radio" v-model="em08" :value="'S0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em08" :value="'T0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em08" :value="'ST'"></td>
                     </tr>
                     <tr>
                         <td>9</td>
                         <td>{{ PERTANYAAN_EM[9] }}</td>
-                        <td class="text-center"><input type="radio" v-model="em09" :value="'P1'"></td>
-                        <td class="text-center"><input type="radio" v-model="em09" :value="'P0'"></td>
-                        <td class="text-center"><input type="radio" v-model="em09" :value="'N0'"></td>
-                        <td class="text-center"><input type="radio" v-model="em09" :value="'N1'"></td>
+                        <td class="text-center"><input type="radio" v-model="em09" :value="'SS'"></td>
+                        <td class="text-center"><input type="radio" v-model="em09" :value="'S0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em09" :value="'T0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em09" :value="'ST'"></td>
                     </tr>
                     <tr>
                         <td>10</td>
                         <td>{{ PERTANYAAN_EM[10] }}</td>
-                        <td class="text-center"><input type="radio" v-model="em10" :value="'P1'"></td>
-                        <td class="text-center"><input type="radio" v-model="em10" :value="'P0'"></td>
-                        <td class="text-center"><input type="radio" v-model="em10" :value="'N0'"></td>
-                        <td class="text-center"><input type="radio" v-model="em10" :value="'N1'"></td>
+                        <td class="text-center"><input type="radio" v-model="em10" :value="'SS'"></td>
+                        <td class="text-center"><input type="radio" v-model="em10" :value="'S0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em10" :value="'T0'"></td>
+                        <td class="text-center"><input type="radio" v-model="em10" :value="'ST'"></td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
+        <!--
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -350,6 +351,7 @@
                 </tr>
             </tbody>
         </table>
+        -->
     </div>
 
     <div className="card">
@@ -370,127 +372,86 @@
                     <tr>
                         <td>1</td>
                         <td>{{ PERTANYAAN_ED[1] }}</td>
-                        <td class="text-center"><input type="radio" v-model="ed01" :value="'P1'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed01" :value="'P0'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed01" :value="'N0'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed01" :value="'N1'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed01" :value="'SS'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed01" :value="'S0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed01" :value="'T0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed01" :value="'ST'"></td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>{{ PERTANYAAN_ED[2] }}</td>
-                        <td class="text-center"><input type="radio" v-model="ed02" :value="'P1'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed02" :value="'P0'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed02" :value="'N0'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed02" :value="'N1'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed02" :value="'SS'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed02" :value="'S0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed02" :value="'T0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed02" :value="'ST'"></td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>{{ PERTANYAAN_ED[3] }}</td>
-                        <td class="text-center"><input type="radio" v-model="ed03" :value="'P1'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed03" :value="'P0'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed03" :value="'N0'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed03" :value="'N1'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed03" :value="'SS'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed03" :value="'S0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed03" :value="'T0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed03" :value="'ST'"></td>
                     </tr>
                     <tr>
                         <td>4</td>
                         <td>{{ PERTANYAAN_ED[4] }}</td>
-                        <td class="text-center"><input type="radio" v-model="ed04" :value="'P1'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed04" :value="'P0'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed04" :value="'N0'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed04" :value="'N1'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed04" :value="'SS'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed04" :value="'S0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed04" :value="'T0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed04" :value="'ST'"></td>
                     </tr>
                     <tr>
                         <td>5</td>
                         <td>{{ PERTANYAAN_ED[5] }}</td>
-                        <td class="text-center"><input type="radio" v-model="ed05" :value="'P1'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed05" :value="'P0'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed05" :value="'N0'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed05" :value="'N1'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed05" :value="'SS'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed05" :value="'S0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed05" :value="'T0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed05" :value="'ST'"></td>
                     </tr>
                     <tr>
                         <td>6</td>
                         <td>{{ PERTANYAAN_ED[6] }}</td>
-                        <td class="text-center"><input type="radio" v-model="ed06" :value="'P1'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed06" :value="'P0'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed06" :value="'N0'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed06" :value="'N1'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed06" :value="'SS'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed06" :value="'S0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed06" :value="'T0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed06" :value="'ST'"></td>
                     </tr>
                     <tr>
                         <td>7</td>
                         <td>{{ PERTANYAAN_ED[7] }}</td>
-                        <td class="text-center"><input type="radio" v-model="ed07" :value="'P1'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed07" :value="'P0'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed07" :value="'N0'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed07" :value="'N1'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed07" :value="'SS'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed07" :value="'S0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed07" :value="'T0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed07" :value="'ST'"></td>
                     </tr>
                     <tr>
                         <td>8</td>
                         <td>{{ PERTANYAAN_ED[8] }}</td>
-                        <td class="text-center"><input type="radio" v-model="ed08" :value="'P1'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed08" :value="'P0'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed08" :value="'N0'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed08" :value="'N1'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed08" :value="'SS'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed08" :value="'S0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed08" :value="'T0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed08" :value="'ST'"></td>
                     </tr>
                     <tr>
                         <td>9</td>
                         <td>{{ PERTANYAAN_ED[9] }}</td>
-                        <td class="text-center"><input type="radio" v-model="ed09" :value="'P1'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed09" :value="'P0'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed09" :value="'N0'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed09" :value="'N1'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed09" :value="'SS'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed09" :value="'S0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed09" :value="'T0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed09" :value="'ST'"></td>
                     </tr>
                     <tr>
                         <td>10</td>
                         <td>{{ PERTANYAAN_ED[10] }}</td>
-                        <td class="text-center"><input type="radio" v-model="ed10" :value="'P1'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed10" :value="'P0'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed10" :value="'N0'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed10" :value="'N1'"></td>
-                    </tr>
-                    <tr>
-                        <td>11</td>
-                        <td>{{ PERTANYAAN_ED[11] }}</td>
-                        <td class="text-center"><input type="radio" v-model="ed11" :value="'P1'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed11" :value="'P0'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed11" :value="'N0'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed11" :value="'N1'"></td>
-                    </tr>
-                    <tr>
-                        <td>12</td>
-                        <td>{{ PERTANYAAN_ED[12] }}</td>
-                        <td class="text-center"><input type="radio" v-model="ed12" :value="'P1'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed12" :value="'P0'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed12" :value="'N0'"></td>
-                        <td class="text-center"><input type="radio" v-model="ed12" :value="'N1'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed10" :value="'SS'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed10" :value="'S0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed10" :value="'T0'"></td>
+                        <td class="text-center"><input type="radio" v-model="ed10" :value="'ST'"></td>
                     </tr>
                 </tbody>
             </table>
         </div>
-
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>No.</th>
-                    <th>Pernyataan</th>
-                    <th class="text-center">Ya</th>
-                    <th class="text-center">Tidak</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>13</td>
-                    <td>{{ PERTANYAAN_ED[13] }}</td>
-                    <td class="text-center"><input type="radio" v-model="ed13" :value="'TT'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed13" :value="'FF'"></td>
-                </tr>
-                <tr>
-                    <td>14</td>
-                    <td>{{ PERTANYAAN_ED[14] }}</td>
-                    <td class="text-center"><input type="radio" v-model="ed14" :value="'TT'"></td>
-                    <td class="text-center"><input type="radio" v-model="ed14" :value="'FF'"></td>
-                </tr>
-            </tbody>
-        </table>
     </div>
 
     <div className="card">
@@ -509,16 +470,16 @@ const $router = useRouter()
 
 const PERTANYAAN_ET = [
     null,
-	"Tuberculosis paru adalah suatu penyakit infeksi yang disebabkan oleh bakteri Microbakterium Tuberkulosa",
-	"Penyakit tuberculosis dapat menular melalui alat makan.",
-	"Gejala yang dirasakan penderita tuberculosis adalah batuk lebih dari 3 minggu, demam dan disertai influenza",
-	"Nyeri dada, sesak napas dan batuk berdarah adalah tanda dan gejala penderita penyakit tuberculosis.",
-	"Badan lemah, nafsu makan menurun, berat badan turun, kurang enak badan bukan merupakan gejala-gejala tuberculosis",
-	"Penyakit Tuberculosis tidak dapat ditularkan melalui percikan dahak dan bersin penderita tuberculosis",
-	"Apakah Minum obat dengan teratur termasuk kedalam pencegahan penyakit tuberculosis",
-	"Menutup mulut waktu batuk dan bersin termasuk dalam pencegahan tuberculosis",
-	"Dahak penderita tuberculosis tidak perlu ditampung dalam wadah khusus",
-	"Meningkatkan daya tahan tubuh dengan makan makanan yang bergizi termasuk kedalam pencegahan penyakit tuberculosis"
+	"TB (tuberkulosis) adalah penyakit yang disebabkan oleh kuman yang menyerang paru-paru.",
+	"TB bisa menular lewat alat makan seperti sendok dan piring.",
+	"Orang yang sakit TB biasanya batuk lama lebih dari 3 minggu, demam, dan seperti flu.",
+	"Nyeri dada, sesak napas, dan batuk berdarah bisa jadi tanda orang sakit TB.",
+	"Kalau orang lemas, tidak nafsu makan, dan berat badan turun, bisa jadi itu gejala TB.",
+	"TB tidak bisa menular lewat batuk atau bersin dari orang yang sakit.",
+	"Minum obat dengan teratur bisa membantu menyembuhkan TB.",
+	"Menutup mulut saat batuk dan bersin bisa mencegah penyebaran TB ke orang lain.",
+	"Dahak dari orang yang sakit TB tidak perlu dibuang di tempat khusus.",
+	"Makan bergizi bisa membantu tubuh kita melawan penyakit TB."
 ]
 const et01 = ref(null)
 const et02 = ref(null)
@@ -533,16 +494,16 @@ const et10 = ref(null)
 
 const PERTANYAAN_ES = [
     null,
-	"Saya menggunakan masker jika saya mengalami batuk berdahak selama lebih dari 2 minggu",
-	"Saya menutup mulut dengan tissue atau saput tangan Saat batuk dan bersin",
-	"Saya menggunakan masker pada saat berpergian",
-	"Saya membuka pintu dan jendela setiap hari agar udara masuk ke dalam rumah",
-	"Saya memastikan seluruh ruangan rumah mendapat sinar matahari yang cukup dipagi hari",
-	"Saya membuang dahak pada tempat khusus atau langsung ke saluran air pembuangan",
-	"Saya tidak berdekatan  dengan teman Ketika batuk",
-	"Saya melakukan pemeriksaan kesehatan di pusat pelayanan kesehatan pada saat saya mengalami batuk berdahak",
-	"Saya selalu memakai masker ,ketika saya mengalami batuk berdahak",
-	"Saya menggunakan peralatan makan terpisah dengan teman atau keluarga yang lain"
+	"Jika saya batuk berdahak selama lebih dari 2 minggu, saya memakai masker.",
+	"Saya selalu menutup mulut dengan tisu atau tangan saat batuk atau bersin.",
+	"Saya memakai masker kalau sedang bepergian.",
+	"Saya membuka jendela atau pintu agar udara segar bisa masuk ke dalam rumah.",
+	"Saya memastikan rumah mendapat cahaya matahari yang cukup setiap hari.",
+	"Saya membuang dahak di tempat khusus atau saluran air, bukan di sembarang tempat.",
+	"Saat ada teman yang sedang batuk, saya menjaga jarak darinya.",
+	"Jika saya batuk berdahak, saya pergi periksa ke puskesmas atau tempat layanan kesehatan.",
+	"Saat batuk berdahak, saya selalu memakai masker agar tidak menular ke orang lain.",
+	"Jika saya sakit, saya memakai alat makan sendiri (tidak berbagi dengan orang lain)."
 ]
 
 const es01 = ref(null)
@@ -558,11 +519,11 @@ const es10 = ref(null)
 
 const PERTANYAAN_EP = [
     null,
-	"Saya menutup mulut jika bersin",
-	"Saya menggunakan masker bila batuk",
-	"Saya tidak meludah sembarang tempat",
-	"Saya periksa ke ruang UKS bila batuk-batuk",
-	"Badan lemah, nafsu makan menurun, berat badan turun, kurang enak badan melakukan konsultasi dengan guru /PJ UKS"
+	"Saya menutup mulut saat bersin atau batuk.",
+	"Saya memakai masker jika sedang batuk.",
+	"Saya tidak meludah di sembarang tempat.",
+	"Saya pergi ke ruang UKS jika saya batuk terus-menerus.",
+	"Jika saya merasa lemas, tidak nafsu makan, atau berat badan turun, saya melapor ke guru atau petugas UKS."
 ]
 
 const ep1 = ref(null)
@@ -583,9 +544,9 @@ const PERTANYAAN_EM = [
 	"Saya merasa lebih aman jika melakukan tindakan pencegahan terhadap TB (kebutuhan keamanan).",
 	"Saya merasa dihargai ketika orang lain melihat saya peduli terhadap pencegahan TB (kebutuhan penghargaan)",
 	"Melakukan pencegahan TB membuat saya merasa berkontribusi pada masyarakat (kebutuhan aktualisasi diri)",
-	"Apakah anda mendapat cukup informasi mengenai pencegahan TB dari tenaga kesehatan atau kampanye ?",
-	"Apakah anda merasa lingkungan sekitar (keluarga/ teman/ masyarakat) mendukung tindakan pencegahan TB",
-	"Apa faktor utama yang mendorong anda untuk melakukan pencegahan TB ?"
+	// "Apakah anda mendapat cukup informasi mengenai pencegahan TB dari tenaga kesehatan atau kampanye ?",
+	// "Apakah anda merasa lingkungan sekitar (keluarga/ teman/ masyarakat) mendukung tindakan pencegahan TB",
+	// "Apa faktor utama yang mendorong anda untuk melakukan pencegahan TB ?"
 ]
 
 const em01 = ref(null)
@@ -598,26 +559,22 @@ const em07 = ref(null)
 const em08 = ref(null)
 const em09 = ref(null)
 const em10 = ref(null)
-const em11 = ref(null)
-const em12 = ref(null)
-const em13 = ref(null)
+// const em11 = ref(null)
+// const em12 = ref(null)
+// const em13 = ref(null)
 
 const PERTANYAAN_ED = [
     null,
-	"Saya merasa didukung oleh keluarga dalam menjaga kesehatan untuk mencegah ",
-	"Saya merasa teman atau tetangga peduli terhadap kesehatan saya dan memberi motivasi untuk mencegah TB",
-	"Saya merasa nyaman untuk berbicara tentang pencegahan TB dengan keluarga atau teman",
-	"Keluarga saya membantu menyediakan fasilitas seperti masker atau menjaga kebersihan rumah untuk mencegahTB",
-	"Saya merasa mendapatkan bantuan logistik (seperti akses ke fasilitas kesehatan) dari pemerintah atau masyarakat",
-	"Saya merasa orang disekitar saya membantu saya jika saya membutuhkan pemeriksaan kesehatan untuk TB",
-	"Saya mendapatkan informasi yang cukup tentang pencegahan TB dari tenaga kesehatan",
-	"Saya merasa keluarga atau teman sering memberikan saran tentang pentingnya mencegah TB",
-	"Saya merasa informasi tentang pencegahan TB mudah diakses di lingkungan saya (seperti poster, kampanye kesehatan)",
-	"Keluarga saya memberikan dukungan dengan memuji atau mendorong saya untuk tetap menjaga kesehatan",
-	"Saya merasa teman atau masyarakat memberikan apresiasi atas tindakan saya dalam mencegah TB",
-	"Saya sering berdiskusi dengan tenaga kesehatan tentang langkah-langkah pencegahan TB yang tepat",
-	"Apakah anda merasa lingkungan anda mendukung pencegahan TB ?",
-	"Faktor utama apa yang paling membantu anda dalam mencegah TB ?"
+	"Sekolah mengajari saya cara mencegah penyakit TB secara rutin.",
+	"Sekolah menyediakan tempat cuci tangan dengan sabun agar tangan saya tetap bersih.",
+	"Jika ada siswa yang sakit, sekolah menyarankan agar istirahat di rumah.",
+	"Guru dan staf sekolah memberikan contoh hidup bersih dan sehat.",
+	"Sekolah punya program pemeriksaan kesehatan untuk mengetahui penyakit seperti TB.",
+	"Setiap kelas punya jendela atau ventilasi agar udara di kelas bisa berganti.",
+	"Sekolah memberi informasi penting tentang suntik BCG untuk mencegah TB.",
+	"Sekolah bekerja sama dengan puskesmas atau tempat kesehatan untuk mencegah penyakit TB.",
+	"Sekolah mengadakan kegiatan edukasi untuk mengingatkan bahaya penyakit TB.",
+	"Sekolah mendukung siswa agar periksa ke dokter kalau mengalami gejala TB."
 ]
 
 const ed01 = ref(null)
@@ -630,10 +587,24 @@ const ed07 = ref(null)
 const ed08 = ref(null)
 const ed09 = ref(null)
 const ed10 = ref(null)
-const ed11 = ref(null)
-const ed12 = ref(null)
-const ed13 = ref(null)
-const ed14 = ref(null)
+// const ed11 = ref(null)
+// const ed12 = ref(null)
+// const ed13 = ref(null)
+// const ed14 = ref(null)
+
+function linkert(char) {
+    if(char=='SS') return 4
+    if(char=='SR') return 3
+    if(char=='KD') return 2
+    if(char=='TP') return 1
+}
+
+function linkertSetuju(char) {
+    if(char=='SS') return 4
+    if(char=='S0') return 3
+    if(char=='T0') return 2
+    if(char=='ST') return 1
+}
 
 function onSubmit() {
     if(!et01.value) {
@@ -779,18 +750,18 @@ function onSubmit() {
         Swal.fire("Evaluasi Motivasi No.10 belum terisi")
         return
     }
-    if(!em11.value) {
-        Swal.fire("Evaluasi Motivasi No.11 belum terisi")
-        return
-    }
-    if(!em12.value) {
-        Swal.fire("Evaluasi Motivasi No.12 belum terisi")
-        return
-    }
-    if(!em13.value) {
-        Swal.fire("Evaluasi Motivasi No.13 belum terisi")
-        return
-    }
+    // if(!em11.value) {
+    //     Swal.fire("Evaluasi Motivasi No.11 belum terisi")
+    //     return
+    // }
+    // if(!em12.value) {
+    //     Swal.fire("Evaluasi Motivasi No.12 belum terisi")
+    //     return
+    // }
+    // if(!em13.value) {
+    //     Swal.fire("Evaluasi Motivasi No.13 belum terisi")
+    //     return
+    // }
 
     if(!ed01.value) {
         Swal.fire("Evaluasi Dukungan No.1 belum terisi")
@@ -832,78 +803,78 @@ function onSubmit() {
         Swal.fire("Evaluasi Dukungan No.10 belum terisi")
         return
     }
-    if(!ed11.value) {
-        Swal.fire("Evaluasi Dukungan No.11 belum terisi")
-        return
-    }
-    if(!ed12.value) {
-        Swal.fire("Evaluasi Dukungan No.12 belum terisi")
-        return
-    }
-    if(!ed13.value) {
-        Swal.fire("Evaluasi Dukungan No.13 belum terisi")
-        return
-    }
-    if(!ed14.value) {
-        Swal.fire("Evaluasi Dukungan No.14 belum terisi")
-        return
-    }
+    // if(!ed11.value) {
+    //     Swal.fire("Evaluasi Dukungan No.11 belum terisi")
+    //     return
+    // }
+    // if(!ed12.value) {
+    //     Swal.fire("Evaluasi Dukungan No.12 belum terisi")
+    //     return
+    // }
+    // if(!ed13.value) {
+    //     Swal.fire("Evaluasi Dukungan No.13 belum terisi")
+    //     return
+    // }
+    // if(!ed14.value) {
+    //     Swal.fire("Evaluasi Dukungan No.14 belum terisi")
+    //     return
+    // }
 
     $.LoadingOverlay("show", LOADING_OPTIONS);
     $axios.post('evaluasi', {
         data: [
-            { tipe: "et", n: 1, a: et01.value },
-            { tipe: "et", n: 2, a: et02.value },
-            { tipe: "et", n: 3, a: et03.value },
-            { tipe: "et", n: 4, a: et04.value },
-            { tipe: "et", n: 5, a: et05.value },
-            { tipe: "et", n: 6, a: et06.value },
-            { tipe: "et", n: 7, a: et07.value },
-            { tipe: "et", n: 8, a: et08.value },
-            { tipe: "et", n: 9, a: et09.value },
-            { tipe: "et", n: 10, a: et10.value },
-            { tipe: "es", n: 1, a: es01.value },
-            { tipe: "es", n: 2, a: es02.value },
-            { tipe: "es", n: 3, a: es03.value },
-            { tipe: "es", n: 4, a: es04.value },
-            { tipe: "es", n: 5, a: es05.value },
-            { tipe: "es", n: 6, a: es06.value },
-            { tipe: "es", n: 7, a: es07.value },
-            { tipe: "es", n: 8, a: es08.value },
-            { tipe: "es", n: 9, a: es09.value },
-            { tipe: "es", n: 10, a: es10.value },
-            { tipe: "ep", n: 1, a: ep1.value },
-            { tipe: "ep", n: 2, a: ep2.value },
-            { tipe: "ep", n: 3, a: ep3.value },
-            { tipe: "ep", n: 4, a: ep4.value },
-            { tipe: "ep", n: 5, a: ep5.value },
-            { tipe: "em", n: 'Aa01', a: em01.value },
-            { tipe: "em", n: 'Aa02', a: em02.value },
-            { tipe: "em", n: 'Aa03', a: em03.value },
-            { tipe: "em", n: 'Ab04', a: em04.value },
-            { tipe: "em", n: 'Ab05', a: em05.value },
-            { tipe: "em", n: 'Ab06', a: em06.value },
-            { tipe: "em", n: 'B001', a: em07.value },
-            { tipe: "em", n: 'B002', a: em08.value },
-            { tipe: "em", n: 'B003', a: em09.value },
-            { tipe: "em", n: 'B004', a: em10.value },
-            { tipe: "em", n: 'C001', a: em11.value },
-            { tipe: "em", n: 'C002', a: em12.value },
-            { tipe: "em", n: 'C003', a: em13.value },
-            { tipe: "ed", n: 'Dc07', a: ed01.value },
-            { tipe: "ed", n: 'Dc08', a: ed02.value },
-            { tipe: "ed", n: 'Dc09', a: ed03.value },
-            { tipe: "ed", n: 'Dd10', a: ed04.value },
-            { tipe: "ed", n: 'Dd11', a: ed05.value },
-            { tipe: "ed", n: 'Dd12', a: ed06.value },
-            { tipe: "ed", n: 'De13', a: ed07.value },
-            { tipe: "ed", n: 'De14', a: ed08.value },
-            { tipe: "ed", n: 'De15', a: ed09.value },
-            { tipe: "ed", n: 'Df16', a: ed10.value },
-            { tipe: "ed", n: 'Df17', a: ed11.value },
-            { tipe: "ed", n: 'Df18', a: ed12.value },
-            { tipe: "ed", n: 'E004', a: ed13.value },
-            { tipe: "ed", n: 'E005', a: ed14.value }
+            { tipe: "et", n: 1, a: et01.value, s: et01.value=='B'?1:0  },
+            { tipe: "et", n: 2, a: et02.value, s: et02.value=='S'?1:0  },
+            { tipe: "et", n: 3, a: et03.value, s: et03.value=='B'?1:0  },
+            { tipe: "et", n: 4, a: et04.value, s: et04.value=='B'?1:0  },
+            { tipe: "et", n: 5, a: et05.value, s: et05.value=='B'?1:0  },
+            { tipe: "et", n: 6, a: et06.value, s: et06.value=='S'?1:0  },
+            { tipe: "et", n: 7, a: et07.value, s: et07.value=='B'?1:0  },
+            { tipe: "et", n: 8, a: et08.value, s: et08.value=='B'?1:0  },
+            { tipe: "et", n: 9, a: et09.value, s: et09.value=='S'?1:0  },
+            { tipe: "et", n: 10, a: et10.value, s: et10.value=='B'?1:0  },
+            { tipe: "es", n: 1, a: es01.value, s: linkert(es01.value) },
+            { tipe: "es", n: 2, a: es02.value, s: linkert(es02.value) },
+            { tipe: "es", n: 3, a: es03.value, s: linkert(es03.value) },
+            { tipe: "es", n: 4, a: es04.value, s: linkert(es04.value) },
+            { tipe: "es", n: 5, a: es05.value, s: linkert(es05.value) },
+            { tipe: "es", n: 6, a: es06.value, s: linkert(es06.value) },
+            { tipe: "es", n: 7, a: es07.value, s: linkert(es07.value) },
+            { tipe: "es", n: 8, a: es08.value, s: linkert(es08.value) },
+            { tipe: "es", n: 9, a: es09.value, s: linkert(es09.value) },
+            { tipe: "es", n: 10, a: es10.value, s: linkert(es10.value) },
+            { tipe: "ep", n: 1, a: ep1.value, s: ep1.value=='Y'?1:0 },
+            { tipe: "ep", n: 2, a: ep2.value, s: ep2.value=='Y'?1:0 },
+            { tipe: "ep", n: 3, a: ep3.value, s: ep3.value=='Y'?1:0 },
+            { tipe: "ep", n: 4, a: ep4.value, s: ep4.value=='Y'?1:0 },
+            { tipe: "ep", n: 5, a: ep5.value, s: ep5.value=='Y'?1:0 },
+            { tipe: "em", n: 1, a: em01.value, s: linkertSetuju(em01.value) },
+            { tipe: "em", n: 2, a: em02.value, s: linkertSetuju(em02.value) },
+            { tipe: "em", n: 3, a: em03.value, s: linkertSetuju(em03.value) },
+            { tipe: "em", n: 4, a: em04.value, s: linkertSetuju(em04.value) },
+            { tipe: "em", n: 5, a: em05.value, s: linkertSetuju(em05.value) },
+            { tipe: "em", n: 6, a: em06.value, s: linkertSetuju(em06.value) },
+            { tipe: "em", n: 7, a: em07.value, s: linkertSetuju(em07.value) },
+            { tipe: "em", n: 8, a: em08.value, s: linkertSetuju(em08.value) },
+            { tipe: "em", n: 9, a: em09.value, s: linkertSetuju(em09.value) },
+            { tipe: "em", n: 10, a: em10.value, s: linkertSetuju(em10.value) },
+            // { tipe: "em", n: 'C001', a: em11.value },
+            // { tipe: "em", n: 'C002', a: em12.value },
+            // { tipe: "em", n: 'C003', a: em13.value },
+            { tipe: "ed", n: 1, a: ed01.value, s: linkertSetuju(ed01.value) },
+            { tipe: "ed", n: 2, a: ed02.value, s: linkertSetuju(ed02.value) },
+            { tipe: "ed", n: 3, a: ed03.value, s: linkertSetuju(ed03.value) },
+            { tipe: "ed", n: 4, a: ed04.value, s: linkertSetuju(ed04.value) },
+            { tipe: "ed", n: 5, a: ed05.value, s: linkertSetuju(ed05.value) },
+            { tipe: "ed", n: 6, a: ed06.value, s: linkertSetuju(ed06.value) },
+            { tipe: "ed", n: 7, a: ed07.value, s: linkertSetuju(ed07.value) },
+            { tipe: "ed", n: 8, a: ed08.value, s: linkertSetuju(ed08.value) },
+            { tipe: "ed", n: 9, a: ed09.value, s: linkertSetuju(ed09.value) },
+            { tipe: "ed", n: 10, a: ed10.value, s: linkertSetuju(ed10.value) },
+            // { tipe: "ed", n: 'Df17', a: ed11.value },
+            // { tipe: "ed", n: 'Df18', a: ed12.value },
+            // { tipe: "ed", n: 'E004', a: ed13.value },
+            // { tipe: "ed", n: 'E005', a: ed14.value }
         ]
     })
     .then(response => {

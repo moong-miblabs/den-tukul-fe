@@ -221,9 +221,33 @@ const router = createRouter({
             component: AppLayout,
             children : [
                 {
+                    path: '/result/:id',
+                    name: 'result/id',
+                    component: () => import('@/views/uikit/Result0.vue'),
+                    beforeEnter: authAsAdmin
+                }
+            ]
+        },
+        {
+            path: '/',
+            component: AppLayout,
+            children : [
+                {
                     path: '/result2',
                     name: 'result2',
                     component: () => import('@/views/uikit/Result2.vue'),
+                    beforeEnter: authAsAdmin
+                }
+            ]
+        },
+        {
+            path: '/',
+            component: AppLayout,
+            children : [
+                {
+                    path: '/result2/:id',
+                    name: 'result2/id',
+                    component: () => import('@/views/uikit/Result21.vue'),
                     beforeEnter: authAsAdmin
                 }
             ]

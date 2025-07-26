@@ -32,158 +32,35 @@
     </div>
 
     <div className="card">
-        <div class="font-semibold text-xl mb-4">EVALUASI TINGKAT PENGETAHUAN</div>
+        <div class="font-semibold text-xl mb-4">Intervensi / Pencegahan</div>
         <table class="table table-striped">
             <thead>
                 <tr>
                     <th>No.</th>
                     <th>Pernyataan</th>
-                    <th class="text-center">Benar/Salah</th>
+                    <th class="text-center">Sudah/Belum</th>
                     <th class="text-center">Skor</th>
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="(et,index) in DATA.evaluasi_pengetahuan">
-                    <td>{{ et.n }}</td>
-                    <td>{{ PERTANYAAN_ET[index+1] }}</td>
-                    <td class="text-center">{{ answerToTextBS(et.a) }}</td>
-                    <td class="text-center">{{ et.s }}</td>
+                <tr v-for="(interveni,index) in INTERVENSI">
+                    <td style="vertical-align: middle;" class="text-center">{{ index+1 }}</td>
+                    <td>{{ interveni }}</td>
+                    <td style="vertical-align: middle;" class="text-center">{{ DATA['q'+(index+1)]?'Sudah':'Belum' }}</td>
+                    <td style="vertical-align: middle;" class="text-center">{{ DATA['q'+(index+1)]?'1':'0' }}</td>
                 </tr>
                 <tr>
-                    <th colspan="2" class="text-center">Total Skor</th>
-                    <td colspan="2" class="text-center">{{ DATA.evaluasi_pengetahuan_result?.t }}</td>
+                    <td colspan="2" class="text-center">Total Skor</td>
+                    <td colspan="2" class="text-center">{{ DATA.total }}</td>
                 </tr>
                 <tr>
-                    <th colspan="2" class="text-center">Kategori</th>
-                    <td colspan="2" class="text-center">{{ DATA.evaluasi_pengetahuan_result?.c }}</td>
+                    <td colspan="2" class="text-center">Kategori</td>
+                    <td colspan="2" class="text-center">{{ DATA.klasifikasi=='B'?'Baik':(DATA.klasifikasi=='K'?'Kurang':'') }}</td>
                 </tr>
             </tbody>
         </table>
     </div>
 
-    <div className="card">
-        <div class="font-semibold text-xl mb-4">EVALUASI SIKAP</div>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>No.</th>
-                    <th>Pernyataan</th>
-                    <th class="text-center">SS/S/K/TP</th>
-                    <th class="text-center">Skor</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr v-for="(es,index) in DATA.evaluasi_sikap">
-                    <td>{{ es.n }}</td>
-                    <td>{{ PERTANYAAN_ES[index+1] }}</td>
-                    <td class="text-start">{{ answerToText(es.a) }}</td>
-                    <td class="text-center">{{ es.s }}</td>
-                </tr>
-                <tr>
-                    <th colspan="2" class="text-center">Total Skor</th>
-                    <td colspan="2" class="text-center">{{ DATA.evaluasi_sikap_result?.t }}</td>
-                </tr>
-                <tr>
-                    <th colspan="2" class="text-center">Kategori</th>
-                    <td colspan="2" class="text-center">{{ DATA.evaluasi_sikap_result?.c }}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <div className="card">
-        <div class="font-semibold text-xl mb-4">EVALUASI PRAKTIK</div>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>No.</th>
-                    <th>Pernyataan</th>
-                    <th class="text-center">Dilakukan / Tidak Dilakukan</th>
-                    <th class="text-center">Skor</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr v-for="(ep,index) in DATA.evaluasi_praktik">
-                    <td>{{ ep.n }}</td>
-                    <td>{{ PERTANYAAN_EP[index+1] }}</td>
-                    <td class="text-start">{{ answerToTextDilakukan(ep.a) }}</td>
-                    <td class="text-center">{{ ep.s }}</td>
-                </tr>
-                <tr>
-                    <th colspan="2" class="text-center">Total Skor</th>
-                    <td colspan="2" class="text-center">{{ DATA.evaluasi_praktik_result?.t }}</td>
-                </tr>
-                <tr>
-                    <th colspan="2" class="text-center">Kategori</th>
-                    <td colspan="2" class="text-center">{{ DATA.evaluasi_praktik_result?.c }}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <div className="card">
-        <div class="font-semibold text-xl mb-4">EVALUASI MOTIVASI</div>
-        <div class="table-responsive">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>No.</th>
-                        <th>Pernyataan</th>
-                        <th class="text-center">SS/S/TS/STS</th>
-                        <th class="text-center">Skor</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr v-for="(em,index) in DATA.evaluasi_motivasi">
-                        <td>{{ em.n }}</td>
-                        <td>{{ PERTANYAAN_EM[index+1] }}</td>
-                        <td class="text-start">{{ answerToTextSetuju(em.a) }}</td>
-                        <td class="text-center">{{ em.s }}</td>
-                    </tr>
-                    <tr>
-                        <th colspan="2" class="text-center">Total Skor</th>
-                        <td colspan="2" class="text-center">{{ DATA.evaluasi_motivasi_result?.t }}</td>
-                    </tr>
-                    <tr>
-                        <th colspan="2" class="text-center">Kategori</th>
-                        <td colspan="2" class="text-center">{{ DATA.evaluasi_motivasi_result?.c }}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <div className="card">
-        <div class="font-semibold text-xl mb-4">EVALUASI DUKUNGAN</div>
-        <div class="table-responsive">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>No.</th>
-                        <th>Pernyataan</th>
-                        <th class="text-center">SS/S/TS/STS</th>
-                        <th class="text-center">Skor</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr v-for="(ed,index) in DATA.evaluasi_dukungan">
-                        <td>{{ ed.n }}</td>
-                        <td>{{ PERTANYAAN_ED[index+1] }}</td>
-                        <td class="text-start">{{ answerToTextSetuju(ed.a) }}</td>
-                        <td class="text-center">{{ ed.s }}</td>
-                    </tr>
-                    <tr>
-                        <th colspan="2" class="text-center">Total Skor</th>
-                        <td colspan="2" class="text-center">{{ DATA.evaluasi_dukungan_result?.t }}</td>
-                    </tr>
-                    <tr>
-                        <th colspan="2" class="text-center">Kategori</th>
-                        <td colspan="2" class="text-center">{{ DATA.evaluasi_dukungan_result?.c }}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
 </template>
 
 <script setup>
@@ -197,129 +74,17 @@ import $axios from '@/axios';
 import { useRoute } from 'vue-router'
 const $route = useRoute()
 
-const PERTANYAAN_ET = [
-    null,
-	"TB (tuberkulosis) adalah penyakit yang disebabkan oleh kuman yang menyerang paru-paru.",
-	"TB bisa menular lewat alat makan seperti sendok dan piring.",
-	"Orang yang sakit TB biasanya batuk lama lebih dari 3 minggu, demam, dan seperti flu.",
-	"Nyeri dada, sesak napas, dan batuk berdarah bisa jadi tanda orang sakit TB.",
-	"Kalau orang lemas, tidak nafsu makan, dan berat badan turun, bisa jadi itu gejala TB.",
-	"TB tidak bisa menular lewat batuk atau bersin dari orang yang sakit.",
-	"Minum obat dengan teratur bisa membantu menyembuhkan TB.",
-	"Menutup mulut saat batuk dan bersin bisa mencegah penyebaran TB ke orang lain.",
-	"Dahak dari orang yang sakit TB tidak perlu dibuang di tempat khusus.",
-	"Makan bergizi bisa membantu tubuh kita melawan penyakit TB."
+const INTERVENSI = [
+    'Vaksinasi Bacillus Calmette et Guerin (BCG)',
+    'Cuci Tangan',
+    'Menutup mulut dengan tisu atau siku Ketika batuk',
+    'Menggunakan masker Ketika batuk',
+    'Tidak  membuang dahak sembarangan (ditempat yang ditentukan)',
+    'Ruangan dengan sirkulasi dan sinar matahari',
+    'Pisahkan ruang tidur anak yang batuk dengan anggota keluarga  yang sehat',
+    'Kurangi kontak dengan penderita dan yang dicurigai menderita TBC',
+    'Periksakan diri di fasilitas Kesehatan terdekat'
 ]
-const et01 = ref(null)
-const et02 = ref(null)
-const et03 = ref(null)
-const et04 = ref(null)
-const et05 = ref(null)
-const et06 = ref(null)
-const et07 = ref(null)
-const et08 = ref(null)
-const et09 = ref(null)
-const et10 = ref(null)
-
-const PERTANYAAN_ES = [
-    null,
-	"Jika saya batuk berdahak selama lebih dari 2 minggu, saya memakai masker.",
-	"Saya selalu menutup mulut dengan tisu atau tangan saat batuk atau bersin.",
-	"Saya memakai masker kalau sedang bepergian.",
-	"Saya membuka jendela atau pintu agar udara segar bisa masuk ke dalam rumah.",
-	"Saya memastikan rumah mendapat cahaya matahari yang cukup setiap hari.",
-	"Saya membuang dahak di tempat khusus atau saluran air, bukan di sembarang tempat.",
-	"Saat ada teman yang sedang batuk, saya menjaga jarak darinya.",
-	"Jika saya batuk berdahak, saya pergi periksa ke puskesmas atau tempat layanan kesehatan.",
-	"Saat batuk berdahak, saya selalu memakai masker agar tidak menular ke orang lain.",
-	"Jika saya sakit, saya memakai alat makan sendiri (tidak berbagi dengan orang lain)."
-]
-
-const es01 = ref(null)
-const es02 = ref(null)
-const es03 = ref(null)
-const es04 = ref(null)
-const es05 = ref(null)
-const es06 = ref(null)
-const es07 = ref(null)
-const es08 = ref(null)
-const es09 = ref(null)
-const es10 = ref(null)
-
-const PERTANYAAN_EP = [
-    null,
-	"Saya menutup mulut saat bersin atau batuk.",
-	"Saya memakai masker jika sedang batuk.",
-	"Saya tidak meludah di sembarang tempat.",
-	"Saya pergi ke ruang UKS jika saya batuk terus-menerus.",
-	"Jika saya merasa lemas, tidak nafsu makan, atau berat badan turun, saya melapor ke guru atau petugas UKS."
-]
-
-const ep1 = ref(null)
-const ep2 = ref(null)
-const ep3 = ref(null)
-const ep4 = ref(null)
-const ep5 = ref(null)
-
-const PERTANYAAN_EM = [
-    null,
-	"Saya ingin mencegah TB karena saya merasa penting untuk menjaga kesehatan diri sendiri dan keluarga",
-	"Saya merasa senang dan bangga jika dapat membantu orang lain memahami pentingnya pencegahan TB",
-	"Mengetahui bahwa tindakan saya dapat mencegah penularan TB memberikan saya kepuasan",
-	"Saya termotivasi mencegah TB karena adanya program pemerintah, seperti vaksinasi dan pemeriksaan gratis",
-	"Saya terdorong untuk melakukan pencegahan TB karena keluarga atau teman saya mendukung tindakan tersebut",
-	"Saya mencegah TB karena merasa malu jika tidak mematuhi anjuran dari tenaga kesehatan atau masyarakat",
-	"Saya mencegah TB untuk melindungi kesehatan fisik saya (kebutuhan fisiologis).",
-	"Saya merasa lebih aman jika melakukan tindakan pencegahan terhadap TB (kebutuhan keamanan).",
-	"Saya merasa dihargai ketika orang lain melihat saya peduli terhadap pencegahan TB (kebutuhan penghargaan)",
-	"Melakukan pencegahan TB membuat saya merasa berkontribusi pada masyarakat (kebutuhan aktualisasi diri)",
-	"Apakah anda mendapat cukup informasi mengenai pencegahan TB dari tenaga kesehatan atau kampanye ?",
-	"Apakah anda merasa lingkungan sekitar (keluarga/ teman/ masyarakat) mendukung tindakan pencegahan TB",
-	"Apa faktor utama yang mendorong anda untuk melakukan pencegahan TB ?"
-]
-
-const em01 = ref(null)
-const em02 = ref(null)
-const em03 = ref(null)
-const em04 = ref(null)
-const em05 = ref(null)
-const em06 = ref(null)
-const em07 = ref(null)
-const em08 = ref(null)
-const em09 = ref(null)
-const em10 = ref(null)
-const em11 = ref(null)
-const em12 = ref(null)
-const em13 = ref(null)
-
-const PERTANYAAN_ED = [
-    null,
-	"Sekolah mengajari saya cara mencegah penyakit TB secara rutin.",
-	"Sekolah menyediakan tempat cuci tangan dengan sabun agar tangan saya tetap bersih.",
-	"Jika ada siswa yang sakit, sekolah menyarankan agar istirahat di rumah.",
-	"Guru dan staf sekolah memberikan contoh hidup bersih dan sehat.",
-	"Sekolah punya program pemeriksaan kesehatan untuk mengetahui penyakit seperti TB.",
-	"Setiap kelas punya jendela atau ventilasi agar udara di kelas bisa berganti.",
-	"Sekolah memberi informasi penting tentang suntik BCG untuk mencegah TB.",
-	"Sekolah bekerja sama dengan puskesmas atau tempat kesehatan untuk mencegah penyakit TB.",
-	"Sekolah mengadakan kegiatan edukasi untuk mengingatkan bahaya penyakit TB.",
-	"Sekolah mendukung siswa agar periksa ke dokter kalau mengalami gejala TB."
-]
-
-const ed01 = ref(null)
-const ed02 = ref(null)
-const ed03 = ref(null)
-const ed04 = ref(null)
-const ed05 = ref(null)
-const ed06 = ref(null)
-const ed07 = ref(null)
-const ed08 = ref(null)
-const ed09 = ref(null)
-const ed10 = ref(null)
-const ed11 = ref(null)
-const ed12 = ref(null)
-const ed13 = ref(null)
-const ed14 = ref(null)
 
 async function getAgama() {
     $.LoadingOverlay("show", LOADING_OPTIONS);
@@ -386,7 +151,7 @@ const jenjangs= ref([])
 
 async function getDATA() {
     $.LoadingOverlay("show", LOADING_OPTIONS);
-    var response = await $axios.get('evaluasi/'+$route.params.id+'/'+$route.params.created_at)
+    var response = await $axios.get('intervensi/'+$route.params.id)
     $.LoadingOverlay("hide");
 
     if(response.data.status === "success") {
@@ -401,35 +166,6 @@ onMounted(async() => {
     await getJenjang()
     await getDATA()
 })
-
-function answerToTextBS(a){
-    if(a == 'B') return "Benar"
-    if(a == 'S') return "Salah"
-    return a
-}
-
-function answerToTextDilakukan(a){
-    if(a == 'Y') return "Dilakukan"
-    if(a == 'T') return "Tidak Dilakukan"
-    return a
-}
-
-function answerToText(a){
-    if(a == 'SS') return "Selalu"
-    if(a == 'SR') return "Sering"
-    if(a == 'KD') return "Kadang"
-    if(a == 'TP') return "Tidak Pernah"
-    return a
-}
-
-function answerToTextSetuju(a){
-    if(a == 'SS') return "Sangat Setuju"
-    if(a == 'S0') return "Setuju"
-    if(a == 'T0') return "Tidak Setuju"
-    if(a == 'ST') return "Sangat Tidak Setuju"
-    return a
-}
-
 </script>
 
 <style lang="css" scoped>

@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 import { LOADING_OPTIONS } from '@/env';
-import $ from 'jquery'; import 'gasparesganga-jquery-loading-overlay';
+import 'jquery'; import 'gasparesganga-jquery-loading-overlay';
 import $axios from '@/axios';
 import { useRouter } from 'vue-router'
 const $router = useRouter()
